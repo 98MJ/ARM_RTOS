@@ -1,0 +1,29 @@
+#include "stm32f4xx.h"
+
+void rcc_init(){
+	RCC->CR |= (1<<0); // HSI ON
+	RCC->AHB1ENR |= (1<<2); // GPIOC Clock Enable
+}
+void gpio_init(){
+	GPIOC->MODER |= (0x01 << 10 | 0x01 << 12
+			| 0x01 << 16);
+	GPIOC->OTYPER |= ()
+
+}
+
+void sys_init(){
+	rcc_init();
+	gpio_init();
+}
+
+int main(){
+
+	sys_init();
+
+	while(1){
+
+
+
+	}
+	return 0;
+}

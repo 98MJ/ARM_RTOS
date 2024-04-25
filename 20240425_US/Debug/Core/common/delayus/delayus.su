@@ -1,0 +1,2 @@
+../Core/common/delayus/delayus.c:10:6:DelayInit	4	static,ignoring_inline_asm
+../Core/common/delayus/delayus.c:25:6:DelayUS	32	static

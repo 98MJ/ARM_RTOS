@@ -1,0 +1,14 @@
+../Core/driver/UltraSonic/UltraSonic.c:12:6:ultra_init	24	static
+../Core/driver/UltraSonic/UltraSonic.c:19:6:DelayInit	4	static,ignoring_inline_asm
+../Core/driver/UltraSonic/UltraSonic.c:34:6:DelayUS	32	static
+../Core/driver/UltraSonic/UltraSonic.c:48:5:UltraSonic_isCmpltRecvEcho	16	static
+../Core/driver/UltraSonic/UltraSonic.c:51:6:UltraSonic_clearEchoFlag	16	static
+../Core/driver/UltraSonic/UltraSonic.c:54:6:UltraSonic_setEchoFlag	16	static
+../Core/driver/UltraSonic/UltraSonic.c:58:5:UltraSonic_getEchopinState	16	static
+../Core/driver/UltraSonic/UltraSonic.c:61:6:UltraSonic_clearTimer	4	static
+../Core/driver/UltraSonic/UltraSonic.c:64:6:UltraSonic_startTimer	8	static
+../Core/driver/UltraSonic/UltraSonic.c:67:6:UltraSonic_stopTimer	8	static
+../Core/driver/UltraSonic/UltraSonic.c:71:10:UltraSonic_getTimerCounter	4	static
+../Core/driver/UltraSonic/UltraSonic.c:75:6:UltraSonic_ISR_Process	16	static
+../Core/driver/UltraSonic/UltraSonic.c:90:6:UltraSonic_startTrig	16	static
+../Core/driver/UltraSonic/UltraSonic.c:96:5:UltraSonic_getDistance	24	static

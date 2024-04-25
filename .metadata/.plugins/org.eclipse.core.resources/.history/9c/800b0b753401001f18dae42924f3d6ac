@@ -1,0 +1,27 @@
+/*
+ * button.c
+ *
+ *  Created on: Apr 23, 2024
+ *      Author: kccistc
+ */
+
+#include "button.h"
+
+
+
+/*void button_init(){
+
+}*/
+
+button_state_t button_getState(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin){
+	static int prevState = RELEASED;
+	int curState = HAL_GPIO_ReadPin(GPIOx, GPIO_Pin);
+	if((prevState == RELEASED) && (curState == PUSHED)){
+		prevState = PUSHED;
+		return ACT_PUSHED;
+	} else if((prevState == PUSHED) && (curState == RELEASED)){
+		prevState = RELEASED;
+		return ACT_RELEASED;
+	}
+	return NO_ACT;
+}

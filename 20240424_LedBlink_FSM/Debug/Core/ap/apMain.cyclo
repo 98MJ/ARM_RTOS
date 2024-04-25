@@ -1,0 +1,7 @@
+../Core/ap/apMain.c:17:6:sys_init	1
+../Core/ap/apMain.c:29:5:apMain	1
+../Core/ap/apMain.c:46:6:apRun	5
+../Core/ap/apMain.c:66:6:powerOnStateRun	5
+../Core/ap/apMain.c:89:6:state1StateRun	4
+../Core/ap/apMain.c:110:6:state2StateRun	4
+../Core/ap/apMain.c:131:6:state3StateRun	4

@@ -1,0 +1,10 @@
+10:27:42 **** Incremental Build of configuration Debug for project 20240424_LedBlink_FSM ****
+make -j16 all 
+arm-none-eabi-size  20240424_LedBlink_FSM.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10692	     12	   1740	  12444	   309c	20240424_LedBlink_FSM.elf
+Finished building: default.size.stdout
+ 
+
+10:27:42 Build Finished. 0 errors, 0 warnings. (took 133ms)
+

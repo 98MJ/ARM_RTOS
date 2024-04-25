@@ -1,0 +1,76 @@
+/*
+ * ultrasonic.c
+ *
+ *  Created on: Apr 24, 2024
+ *      Author: kccistc
+ */
+
+#include "UltraSonic.h"
+extern TIM_HandleTypeDef htim1;
+uint16_t tim_counter;
+int echoFlag = 0;
+int UltraSonic_getEchopinState(){
+
+   return HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_1);
+}
+void UltraSonic_clearTimer(){
+   __HAL_TIM_SET_COUNTER(&htim1,0);
+}
+void UltraSonic_startTimer(){
+   HAL_TIM_Base_Start(&htim1);
+}
+void UltraSonic_stopTimer(){
+   HAL_TIM_Base_Stop(&htim1);
+}
+uint16_t UltraSonic_getTimerCounter(){
+   return __HAL_TIM_GET_COUNTER(&htim1);
+}
+
+void UltraSonic_ISR_Process(uint16_t GPIO_Pin){
+
+   if(GPIO_Pin == GPIO_PIN_1){
+      if(UltraSonic_getEchopinState()){
+
+         UltraSonic_clearTimer();
+         UltraSonic_startTimer();
+         UltraSonic_clearEchoFlag();
+         }
+         else{
+            UltraSonic_stopTimer();
+            tim_counter = UltraSonic_getTimerCounter();
+            UltraSonic_setEchoFlag();
+         }
+      }
+}
+
+void UltraSonic_startTrig(){
+   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, SET);
+   HAL_Delay(1);
+   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, RESET);
+}
+void UltraSonic_clearEchoFlag(){
+
+   echoFlag = 0;
+
+}
+void UltraSonic_setEchoFlag(){
+
+   echoFlag = 1;
+
+}
+int UltraSonic_isCmpltRescvEcho(){
+   return   echoFlag;
+}
+int UltraSonic_getDistance()
+{
+   int timeout = 0;
+   UltraSonic_startTrig();
+   while(!UltraSonic_isCmpltRescvEcho()){
+      timeout++;
+      if(timeout > 20) return 0;
+      HAL_Delay(1);
+   }
+   UltraSonic_clearEchoFlag();
+   return tim_counter * 0.017;
+
+}

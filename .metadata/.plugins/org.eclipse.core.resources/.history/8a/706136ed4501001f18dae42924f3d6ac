@@ -1,0 +1,22 @@
+/*
+ * LCD.c
+ *
+ *  Created on: Apr 23, 2024
+ *      Author: kccistc
+ */
+
+#include "LCD.h"
+
+void LCD_sendData(uint8_t data){
+
+}
+
+void LCD_writeCmdData(uint8_t data){
+	LCD_cmdMode();
+	LCD_writeMode();
+	LCD_sendByte(data);
+}
+void LCD_writeCharData(uint8_t data){
+
+
+}

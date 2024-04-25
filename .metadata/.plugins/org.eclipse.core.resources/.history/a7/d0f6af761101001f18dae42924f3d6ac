@@ -1,0 +1,81 @@
+#include "stm32f4xx_hal.h"
+
+
+
+void rcc_init(){
+
+   RCC-> CR |= (1<<0); //HSI ON
+   RCC-> AHB1ENR |= (1<<2); // GPIOC CLOCK Enable
+
+}
+void gpio_init(){
+
+   //GPIO OUT PP,NOPUPD,LOW: PC5,6,8
+   GPIOC->MODER |= (0x01<<10);//PC5
+   GPIOC->MODER |= (0x01<<12);//PC6
+   GPIOC->MODER |= (0x01<<16);//PC8
+
+   GPIOC->OTYPER &= ~(1<<5|1<<6|1<<8);//PC5,PC6,PC8 PUSH PULL
+   //GPIO IN NOPUPD: PC10,11,12
+   GPIOC->MODER &= ~(0x03<<20);//PC10
+   GPIOC->MODER &= ~(0x03<<22);//PC11
+   GPIOC->MODER &= ~(0x03<<24);//PC12
+
+
+}
+void sys_init()
+{
+   rcc_init();
+   gpio_init();
+
+}
+void GPIO_write(GPIO_TypeDef * GPIOx, uint16_t pin, int state)
+{
+   if(state == RESET){
+      GPIOx->ODR &= ~(1<<pin);
+   }
+   else {
+      GPIOx->ODR |= (1<<pin);
+   }
+}
+int GPIO_read(GPIO_TypeDef * GPIOx, uint16_t pin)
+{
+   if(!(GPIOx->IDR & (1<<pin))){
+
+      return 0;
+   }
+   else{
+      return 1;
+   }
+}
+
+int main(){
+
+
+
+   sys_init();
+   while(1)
+   {
+      if(!GPIO_read(GPIOC,10)){
+         GPIO_write(GPIOC,8,SET);
+      }
+      else{
+         GPIO_write(GPIOC,8,RESET);
+      }
+      if(!GPIO_read(GPIOC,11)){
+         GPIO_write(GPIOC,6,SET);
+      }
+      else{
+         GPIO_write(GPIOC,6,RESET);
+      }
+      if(!GPIO_read(GPIOC,12)){
+         GPIO_write(GPIOC,5,SET);
+      }
+      else{
+         GPIO_write(GPIOC,5,RESET);
+      }
+
+   }
+
+   return 0;
+}

@@ -1,0 +1,4 @@
+../Core/Src/gpio.c:10:6:gpio_init	1
+../Core/Src/gpio.c:24:6:GPIO_write	2
+../Core/Src/gpio.c:33:5:GPIO_read	2
+../Core/Src/gpio.c:42:6:GPIO_toggle	1

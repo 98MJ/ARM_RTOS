@@ -1,0 +1,56 @@
+/*
+ * apMain.c
+ *
+ *  Created on: Apr 23, 2024
+ *      Author: kccistc
+ */
+
+#include "apMain.h"
+#include <stdio.h>
+
+button_t button1, button2, button3;
+led_t led1, led2, led3;
+
+
+
+
+ledState_t ledState = POWER_ON;
+
+uint8_t distance;
+
+void sys_init() {
+	button_init(&button1, GPIOC, GPIO_PIN_10);
+	button_init(&button2, GPIOC, GPIO_PIN_11);
+	button_init(&button3, GPIOC, GPIO_PIN_12);
+	led_init(&led1, GPIOC, GPIO_PIN_8);
+	led_init(&led2, GPIOC, GPIO_PIN_6);
+	led_init(&led3, GPIOC, GPIO_PIN_5);
+
+	LCD_init();
+}
+
+int apMain() {
+
+	sys_init();
+	LCD_gotoXY(0, 0);
+	LCD_writeString("Hello STM32!!");
+	LCD_writeStringXY(1, 0, "Power On State");
+
+	char buff[50];
+
+	while (1) {
+		distance = UltraSonic_getDistance();
+		HAL_Delay(200);
+		sprintf(buff, "dist: %dcm      ", distance);
+		LCD_writeStringXY(1, 0, buff);
+	}
+	return 0;
+}
+
+
+
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	UltraSonic_ISR_Process(GPIO_Pin);
+}

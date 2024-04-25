@@ -1,0 +1,83 @@
+#include "stm32f4xx_hal.h"
+/*
+typedef struct {
+	volatile unsigned int MODER;
+	volatile unsigned int OTYPER;
+	volatile unsigned int OSPEEDR;
+	volatile unsigned int PUPDR;
+	volatile unsigned int IDR;
+	volatile unsigned int ODR;
+	volatile unsigned int BSRR;
+	volatile unsigned int LCKR;
+	volatile unsigned int AFRL;
+	volatile unsigned int AFRH;
+}GPIO_TypeDef;*/
+
+#define AHB1_BASE_ADDR		0x40020000
+#define RCC_BASE_ADDR		(AHB1_BASE_ADDR + 0x3800)
+#define GPIOA_BASE_ADDR		(AHB1_BASE_ADDR + 0x0000)
+#define GPIOB_BASE_ADDR		(AHB1_BASE_ADDR + 0x0400)
+#define GPIOC_BASE_ADDR		(AHB1_BASE_ADDR + 0x0800)
+
+#define RCC_CR			(volatile unsigned int*)(RCC_BASE_ADDR + 0x00)  //RCC_CR |= (1<<0)
+#define	RCC_AHB1ENR		(volatile unsigned int*)(RCC_BASE_ADDR + 0x30)  // AHB1_ENR, GPIOA enable
+// volatile - 휘발성, unsigned - 양수, int - 4byte
+// 숫자(상수, data)에 포인터로 주소로 취급하고 데이터가 32bit이고, 양의 값이기 때문에 자료형을 unsigned int 로 설정
+// 보드의 값을 아예 바꾸는 것이라 아니라 해당 코드 동작시에만, 값이 바뀌도록 volatile 을 취함
+// 그 주소안의 값을 바꾸기 위해 *를 한번 더 취한다, *가 없으면 0x40023800 값을 바꾸는 것이고
+// *가 있음으로써 0x40023800안의 값을 바꿀 수 있음
+
+//#define GPIOA			((GPIO_TypeDef*)GPIOA_BASE_ADDR) //알아서 4byte씩 주소 차지 (알아서 증가)
+/*
+#define	GPIOA_MODER		(volatile unsigned int*)(GPIOA_BASE_ADDR + 0x00)
+#define	GPIOA_OTYPER	(volatile unsigned int*)(GPIOA_BASE_ADDR + 0x04)
+#define GPIOA_OSPEEDR	(volatile unsigned int*)(GPIOA_BASE_ADDR + 0x08)
+#define GPIOA_PUPDR		(volatile unsigned int*)(GPIOA_BASE_ADDR + 0x0C)
+#define GPIOA_IDR		(volatile unsigned int*)(GPIOA_BASE_ADDR + 0x10)
+#define GPIOA_ODR		(volatile unsigned int*)(GPIOA_BASE_ADDR + 0x14)
+#define GPIOA_BSRR		(volatile unsigned int*)(GPIOA_BASE_ADDR + 0x18)
+#define GPIOA_LCKR		(volatile unsigned int*)(GPIOA_BASE_ADDR + 0x1C)
+#define GPIOA_AFRL		(volatile unsigned int*)(GPIOA_BASE_ADDR + 0x20)
+#define GPIOA_AFRH		(volatile unsigned int*)(GPIOA_BASE_ADDR + 0x24)*/
+//#define GPIOB			((GPIO_TypeDef*)GPIOB_BASE_ADDR)
+//#define GPIOC			((GPIO_TypeDef*)GPIOC_BASE_ADDR)
+
+void delay(unsigned int times) {
+	unsigned int temp = times * 1000;
+	while (temp) temp--;
+}
+
+void clock_init(){
+	RCC->CR |= (1 << 0);
+		//*RCC_CR |= (1 << 0); // offset = 0x00
+		RCC->AHB1ENR |= (1 << 0);
+		//*RCC_AHB1ENR |= (1 << 0); // 0 : GPIOA
+		RCC->AHB1ENR |= (1 << 2);
+		//*RCC_AHB1ENR |= (1<<2);
+
+}
+void gpio_init(){
+
+}
+
+void sys_init(){
+	clock_init();
+	gpio_init();
+}
+
+int main() {
+
+	sys_init();
+
+
+
+	while (1) {
+		GPIOA->ODR |= (1 << 5);
+		GPIOC->ODR |= (1 << 8);
+		delay(200);
+		GPIOA->ODR  &= ~(1 << 5);
+		GPIOC->ODR &= ~(1 << 8);
+		delay(200);
+	}
+	return 0;
+}

@@ -1,0 +1,343 @@
+2024-04-19 16:57:27,814 [INFO] Activator:176 - 
+
+
+2024-04-19 16:57:27,814 [INFO] Activator:177 - !SESSION log4j initialized
+2024-04-19 16:57:30,770 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2024-04-19 16:57:32,184 [INFO] ApplicationProperties:184 - Using Application install path: C:\ST\STM32CubeIDE_1.15.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607
+2024-04-19 16:57:32,197 [INFO] DbMcusXml:78 - Set database path to: C:\ST\STM32CubeIDE_1.15.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607\\db\/mcu/
+2024-04-19 16:57:32,197 [INFO] ApiDb:274 - Set plugin database path to: C:\ST\STM32CubeIDE_1.15.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607\\db\/plugins/boardmanager/
+2024-04-19 16:57:32,197 [WARN] ApiDb:259 - Overriding images path with different value:  => C:\ST\STM32CubeIDE_1.15.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607\\db\/plugins/mcufinder/images/
+2024-04-19 16:57:33,038 [WARN] ApiFinderProperties:113 - C:\Users\kccistc\.stmcufinder\plugins\mcufinder\mcu\mcuFinder.mfd doesn't exist
+2024-04-19 16:57:33,039 [INFO] ApiDb:250 - Set database path to: C:\Users\kccistc\.stmcufinder\plugins\mcufinder//mcu/
+2024-04-19 16:57:33,040 [INFO] DbMcusAds:125 - Set database path to: C:\Users\kccistc\.stmcufinder\plugins\mcufinder//mcu/
+2024-04-19 16:57:33,041 [INFO] CrossReferenceDbSqlite:203 - Set database path to: C:\Users\kccistc\.stmcufinder\plugins\mcufinder//mcu/cs/
+2024-04-19 16:57:33,127 [INFO] RulesReader:64 - Compatibility file has been processed (297 Rules)
+2024-04-19 16:57:33,197 [INFO] DbMcusXml:78 - Set database path to: C:\ST\STM32CubeIDE_1.15.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607\\db\/mcu/
+2024-04-19 16:57:33,197 [INFO] ApiDb:274 - Set plugin database path to: C:\ST\STM32CubeIDE_1.15.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607\\db\/plugins/boardmanager/
+2024-04-19 16:57:33,197 [INFO] ApiDb:261 - Set plugin images path to: C:\ST\STM32CubeIDE_1.15.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607\\db\/plugins/mcufinder/images/
+2024-04-19 16:57:33,198 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\kccistc\.stmcufinder\plugins\mcufinder/ => C:\Users\kccistc\.stmcufinder\plugins\mcufinder
+2024-04-19 16:57:33,198 [INFO] ApiDb:250 - Set database path to: C:\Users\kccistc\.stmcufinder\plugins\mcufinder//mcu/
+2024-04-19 16:57:33,198 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\kccistc\.stmcufinder\plugins\mcufinder/ => C:\Users\kccistc\.stmcufinder\plugins\mcufinder
+2024-04-19 16:57:33,198 [INFO] DbMcusAds:125 - Set database path to: C:\Users\kccistc\.stmcufinder\plugins\mcufinder//mcu/
+2024-04-19 16:57:33,198 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\kccistc\.stmcufinder\plugins\mcufinder/ => C:\Users\kccistc\.stmcufinder\plugins\mcufinder
+2024-04-19 16:57:33,198 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\kccistc\.stmcufinder\plugins\mcufinder/ => C:\Users\kccistc\.stmcufinder\plugins\mcufinder
+2024-04-19 16:57:33,198 [INFO] CrossReferenceDbSqlite:203 - Set database path to: C:\Users\kccistc\.stmcufinder\plugins\mcufinder//mcu/cs/
+2024-04-19 16:57:33,252 [INFO] MainPanel:264 - HeapMemory: 268435456
+2024-04-19 16:57:33,297 [INFO] DbMcusXml:78 - Set database path to: C:\ST\STM32CubeIDE_1.15.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607\\db\/mcu/
+2024-04-19 16:57:33,297 [INFO] ApiDb:274 - Set plugin database path to: C:\ST\STM32CubeIDE_1.15.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607\\db\/plugins/boardmanager/
+2024-04-19 16:57:33,297 [INFO] ApiDb:261 - Set plugin images path to: C:\ST\STM32CubeIDE_1.15.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607\\db\/plugins/mcufinder/images/
+2024-04-19 16:57:33,297 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\kccistc\.stmcufinder\plugins\mcufinder/ => C:\Users\kccistc\.stmcufinder\plugins\mcufinder
+2024-04-19 16:57:33,298 [INFO] ApiDb:250 - Set database path to: C:\Users\kccistc\.stmcufinder\plugins\mcufinder//mcu/
+2024-04-19 16:57:33,298 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\kccistc\.stmcufinder\plugins\mcufinder/ => C:\Users\kccistc\.stmcufinder\plugins\mcufinder
+2024-04-19 16:57:33,298 [INFO] DbMcusAds:125 - Set database path to: C:\Users\kccistc\.stmcufinder\plugins\mcufinder//mcu/
+2024-04-19 16:57:33,298 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\kccistc\.stmcufinder\plugins\mcufinder/ => C:\Users\kccistc\.stmcufinder\plugins\mcufinder
+2024-04-19 16:57:33,298 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\kccistc\.stmcufinder\plugins\mcufinder/ => C:\Users\kccistc\.stmcufinder\plugins\mcufinder
+2024-04-19 16:57:33,298 [INFO] CrossReferenceDbSqlite:203 - Set database path to: C:\Users\kccistc\.stmcufinder\plugins\mcufinder//mcu/cs/
+2024-04-19 16:57:33,308 [INFO] ApplicationProperties:184 - Using Application install path: C:\ST\STM32CubeIDE_1.15.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607
+2024-04-19 16:57:33,309 [INFO] PluginManage:196 - Search for loadable plugins [exclusion list=, ]
+2024-04-19 16:57:33,310 [INFO] PluginManage:310 - Check plugin analytics
+2024-04-19 16:57:33,476 [INFO] AnalyticsPlugin:253 - Accepted Software Licenses: 
+2024-04-19 16:57:33,476 [INFO] AnalyticsPlugin:255 - Accepted CMSIS Pack Licenses: 
+2024-04-19 16:57:33,476 [INFO] AnalyticsPlugin:257 - Accepted Firmware Licenses: 
+2024-04-19 16:57:33,479 [INFO] PluginManage:359 - Loaded plugin analytics (category:tool,tabindex:-1)
+2024-04-19 16:57:33,479 [INFO] PluginManage:310 - Check plugin cadmodel
+2024-04-19 16:57:33,482 [INFO] CADModel:105 - Init CAD model plugin
+2024-04-19 16:57:33,482 [INFO] PluginManage:359 - Loaded plugin cadmodel (category:power,tabindex:5)
+2024-04-19 16:57:33,482 [INFO] PluginManage:310 - Check plugin clock
+2024-04-19 16:57:33,488 [INFO] PluginManage:359 - Loaded plugin clock (category:base,tabindex:2)
+2024-04-19 16:57:33,488 [INFO] PluginManage:310 - Check plugin ddr
+2024-04-19 16:57:33,490 [INFO] PluginManage:359 - Loaded plugin ddr (category:tool,tabindex:6)
+2024-04-19 16:57:33,490 [INFO] PluginManage:310 - Check plugin filemanager
+2024-04-19 16:57:33,628 [INFO] PluginManage:359 - Loaded plugin filemanager (category:base,tabindex:10)
+2024-04-19 16:57:33,628 [INFO] PluginManage:310 - Check plugin ipmanager
+2024-04-19 16:57:33,635 [INFO] PluginManage:359 - Loaded plugin ipmanager (category:base,tabindex:5)
+2024-04-19 16:57:33,636 [INFO] PluginManage:310 - Check plugin lpbam
+2024-04-19 16:57:33,641 [INFO] PluginManage:359 - Loaded plugin lpbam (category:base,tabindex:0)
+2024-04-19 16:57:33,641 [INFO] PluginManage:310 - Check plugin memorymap
+2024-04-19 16:57:33,651 [INFO] PluginManage:359 - Loaded plugin memorymap (category:base,tabindex:4)
+2024-04-19 16:57:33,651 [INFO] PluginManage:310 - Check plugin pinoutandconfiguration
+2024-04-19 16:57:33,658 [INFO] PluginManage:359 - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
+2024-04-19 16:57:33,658 [INFO] PluginManage:310 - Check plugin pinoutconfig
+2024-04-19 16:57:33,724 [WARN] SupportedApi:132 - Cannot load RTOS API schema: s4s-elt-must-match.1: The content of 'definitions' must match (annotation?, (simpleType | complexType)?, (unique | key | keyref)*)). A problem was found starting at: attribute.
+2024-04-19 16:57:33,804 [INFO] PluginManage:359 - Loaded plugin pinoutconfig (category:base,tabindex:0)
+2024-04-19 16:57:33,804 [INFO] PluginManage:310 - Check plugin power
+2024-04-19 16:57:33,809 [INFO] PluginManage:359 - Loaded plugin power (category:power,tabindex:4)
+2024-04-19 16:57:33,809 [INFO] PluginManage:310 - Check plugin projectmanager
+2024-04-19 16:57:33,820 [INFO] PluginManage:359 - Loaded plugin projectmanager (category:projectmanager,tabindex:3)
+2024-04-19 16:57:33,820 [INFO] PluginManage:310 - Check plugin thirdparty
+2024-04-19 16:57:33,894 [WARN] IntegrityCheckThread:84 - waiting for thirdparty lock release [integrity check]
+2024-04-19 16:57:33,894 [INFO] PluginManage:359 - Loaded plugin thirdparty (category:base,tabindex:-1)
+2024-04-19 16:57:33,894 [INFO] IntegrityCheckThread:86 - entering critical section [integrity check]
+2024-04-19 16:57:33,894 [INFO] PluginManage:310 - Check plugin tools
+2024-04-19 16:57:33,895 [INFO] ThirdPartyUpdaterWithRetryManager:70 - Updater plugin not ready yet. [1/15]
+2024-04-19 16:57:33,897 [INFO] PluginManage:359 - Loaded plugin tools (category:base,tabindex:7)
+2024-04-19 16:57:33,897 [INFO] PluginManage:310 - Check plugin tutovideos
+2024-04-19 16:57:34,012 [INFO] PluginManage:359 - Loaded plugin tutovideos (category:base,tabindex:-1)
+2024-04-19 16:57:34,013 [INFO] PluginManage:310 - Check plugin updater
+2024-04-19 16:57:34,021 [INFO] PluginManage:359 - Loaded plugin updater (category:base,tabindex:12)
+2024-04-19 16:57:34,021 [INFO] PluginManage:310 - Check plugin userauth
+2024-04-19 16:57:34,025 [INFO] UserAuth:114 - Init User Auth plugin
+2024-04-19 16:57:34,025 [INFO] PluginManage:359 - Loaded plugin userauth (category:base,tabindex:14)
+2024-04-19 16:57:34,026 [INFO] PluginManage:283 - PluginManage : Loaded plugins [17]
+2024-04-19 16:57:34,162 [INFO] PinOutPanel:1561 - setPackage(No Configuration,No Configuration)
+2024-04-19 16:57:34,205 [INFO] CADModel:165 - CPN selected for project level
+2024-04-19 16:57:34,206 [INFO] CADModel:114 - Register for checkConnection events
+2024-04-19 16:57:34,215 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,215 [INFO] PluginManager:220 - loadIPPluginJar : add adc
+2024-04-19 16:57:34,217 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,217 [INFO] PluginManager:220 - loadIPPluginJar : add aes
+2024-04-19 16:57:34,218 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,218 [INFO] PluginManager:220 - loadIPPluginJar : add can
+2024-04-19 16:57:34,219 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,219 [INFO] PluginManager:220 - loadIPPluginJar : add comp
+2024-04-19 16:57:34,220 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,220 [INFO] PluginManager:220 - loadIPPluginJar : add cryp
+2024-04-19 16:57:34,221 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,221 [INFO] PluginManager:220 - loadIPPluginJar : add dfsdm
+2024-04-19 16:57:34,225 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,225 [INFO] PluginManager:220 - loadIPPluginJar : add dma
+2024-04-19 16:57:34,226 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,226 [INFO] PluginManager:220 - loadIPPluginJar : add dma3
+2024-04-19 16:57:34,228 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,228 [INFO] PluginManager:220 - loadIPPluginJar : add extmemmanager
+2024-04-19 16:57:34,228 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,228 [INFO] PluginManager:220 - loadIPPluginJar : add fatfs
+2024-04-19 16:57:34,231 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,231 [INFO] PluginManager:220 - loadIPPluginJar : add fmc
+2024-04-19 16:57:34,234 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,234 [INFO] PluginManager:220 - loadIPPluginJar : add freertos
+2024-04-19 16:57:34,235 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,236 [INFO] PluginManager:220 - loadIPPluginJar : add genericplugin
+2024-04-19 16:57:34,237 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,237 [INFO] PluginManager:220 - loadIPPluginJar : add gfxmmu
+2024-04-19 16:57:34,240 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,240 [INFO] PluginManager:220 - loadIPPluginJar : add gic
+2024-04-19 16:57:34,242 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,243 [INFO] PluginManager:220 - loadIPPluginJar : add gpio
+2024-04-19 16:57:34,245 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,246 [INFO] PluginManager:220 - loadIPPluginJar : add gtzc
+2024-04-19 16:57:34,247 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,247 [INFO] PluginManager:220 - loadIPPluginJar : add hash
+2024-04-19 16:57:34,248 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,248 [INFO] PluginManager:220 - loadIPPluginJar : add i2c
+2024-04-19 16:57:34,249 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,250 [INFO] PluginManager:220 - loadIPPluginJar : add i2s
+2024-04-19 16:57:34,251 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,251 [INFO] PluginManager:220 - loadIPPluginJar : add i3c
+2024-04-19 16:57:34,254 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,254 [INFO] PluginManager:220 - loadIPPluginJar : add ipddr
+2024-04-19 16:57:34,259 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,259 [INFO] PluginManager:220 - loadIPPluginJar : add linkedlist
+2024-04-19 16:57:34,261 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,261 [INFO] PluginManager:220 - loadIPPluginJar : add lorawan
+2024-04-19 16:57:34,262 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,262 [INFO] PluginManager:220 - loadIPPluginJar : add ltdc
+2024-04-19 16:57:34,266 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,266 [INFO] PluginManager:220 - loadIPPluginJar : add mdma
+2024-04-19 16:57:34,269 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,269 [INFO] PluginManager:220 - loadIPPluginJar : add nvic
+2024-04-19 16:57:34,271 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,271 [INFO] PluginManager:220 - loadIPPluginJar : add opamp
+2024-04-19 16:57:34,272 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,272 [INFO] PluginManager:220 - loadIPPluginJar : add openamp
+2024-04-19 16:57:34,274 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,275 [INFO] PluginManager:220 - loadIPPluginJar : add pdm2pcm
+2024-04-19 16:57:34,279 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,281 [INFO] PluginManager:220 - loadIPPluginJar : add plateformsettings
+2024-04-19 16:57:34,282 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,282 [INFO] PluginManager:220 - loadIPPluginJar : add quadspi
+2024-04-19 16:57:34,284 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,284 [INFO] PluginManager:220 - loadIPPluginJar : add resmgrutility
+2024-04-19 16:57:34,286 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,286 [INFO] PluginManager:220 - loadIPPluginJar : add sai
+2024-04-19 16:57:34,287 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,287 [INFO] PluginManager:220 - loadIPPluginJar : add spi
+2024-04-19 16:57:34,291 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,291 [INFO] PluginManager:220 - loadIPPluginJar : add stm32_wpan
+2024-04-19 16:57:34,293 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,293 [INFO] PluginManager:220 - loadIPPluginJar : add tim
+2024-04-19 16:57:34,295 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,295 [INFO] PluginManager:220 - loadIPPluginJar : add touchsensing
+2024-04-19 16:57:34,297 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,297 [INFO] PluginManager:220 - loadIPPluginJar : add tracer_emb
+2024-04-19 16:57:34,298 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,298 [INFO] PluginManager:220 - loadIPPluginJar : add ts
+2024-04-19 16:57:34,299 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,299 [INFO] PluginManager:220 - loadIPPluginJar : add tsc
+2024-04-19 16:57:34,300 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,300 [INFO] PluginManager:220 - loadIPPluginJar : add ucpd
+2024-04-19 16:57:34,303 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,303 [INFO] PluginManager:220 - loadIPPluginJar : add usart
+2024-04-19 16:57:34,304 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-04-19 16:57:34,304 [INFO] PluginManager:220 - loadIPPluginJar : add usbx
+2024-04-19 16:57:34,417 [INFO] CADModel:165 - CPN selected for project level
+2024-04-19 16:57:34,418 [INFO] CADModel:114 - Register for checkConnection events
+2024-04-19 16:57:34,418 [FATAL] Updater:308 - Updater called before beeing initialized
+2024-04-19 16:57:34,418 [ERROR] CADModel:125 - Updater not yet initialized, retry later 
+2024-04-19 16:57:34,499 [INFO] CADModel:165 - CPN selected for project level
+2024-04-19 16:57:34,499 [INFO] CADModel:114 - Register for checkConnection events
+2024-04-19 16:57:34,499 [FATAL] Updater:308 - Updater called before beeing initialized
+2024-04-19 16:57:34,499 [ERROR] CADModel:125 - Updater not yet initialized, retry later 
+2024-04-19 16:57:34,501 [FATAL] Updater:308 - Updater called before beeing initialized
+2024-04-19 16:57:34,571 [FATAL] Updater:308 - Updater called before beeing initialized
+2024-04-19 16:57:34,575 [INFO] DbMcusAds:53 - JSON generation date=Thu Sep 30 15:55:09 KST 2021 (1632984909247)
+2024-04-19 16:57:34,575 [FATAL] Updater:308 - Updater called before beeing initialized
+2024-04-19 16:57:34,598 [WARN] DetailPanel:346 - Failed to get advertising image, set to default
+2024-04-19 16:57:34,656 [FATAL] Updater:308 - Updater called before beeing initialized
+2024-04-19 16:57:34,657 [FATAL] Updater:308 - Updater called before beeing initialized
+2024-04-19 16:57:34,657 [FATAL] Updater:308 - Updater called before beeing initialized
+2024-04-19 16:57:34,657 [WARN] DetailPanel:346 - Failed to get advertising image, set to default
+2024-04-19 16:57:34,658 [FATAL] Updater:308 - Updater called before beeing initialized
+2024-04-19 16:57:34,694 [ERROR] Updater:1120 - MainUpdater not yet initialized. External WinMGr cannot be set.
+2024-04-19 16:57:34,694 [INFO] Updater:1056 - Updater Version found : 6.11.0
+2024-04-19 16:57:34,707 [INFO] ApplicationProperties:184 - Using Application install path: C:\ST\STM32CubeIDE_1.15.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607
+2024-04-19 16:57:34,727 [INFO] MainUpdater:526 - Copy updater definitions from MX database
+2024-04-19 16:57:34,751 [INFO] MainUpdater:559 - Copy flag file definitions from MX database
+2024-04-19 16:57:34,752 [INFO] MainUpdater:575 - Copy thirdparty index definitions from MX database
+2024-04-19 16:57:34,753 [INFO] MainUpdater:594 - Copy default thirdparty db definitions from MX database
+2024-04-19 16:57:35,061 [INFO] MainUpdater:2873 - connection check result : 10
+2024-04-19 16:57:35,061 [INFO] MainUpdater:3567 - Updater definition file requires update
+2024-04-19 16:57:35,061 [INFO] MainUpdater:290 - Updater Check For Update Now.
+2024-04-19 16:57:35,062 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.110
+2024-04-19 16:57:35,070 [INFO] McuFinderGlobals:63 - Set McuFinder mode to 2 (CubeIDE integrated)
+2024-04-19 16:57:35,070 [INFO] UserAuth:179 - activating auth plugin
+2024-04-19 16:57:35,072 [INFO] UserAuth:415 - Internet connection configuration mode: 1
+2024-04-19 16:57:35,078 [INFO] JxBrowserEngine:152 - Initiate JxBrowser Engine with user profile folder
+2024-04-19 16:57:35,248 [INFO] ServerAccessManage:473 - Download File updaters.zip
+2024-04-19 16:57:35,378 [INFO] FileExtend:240 - Unzip File : updaters.zip
+2024-04-19 16:57:35,378 [INFO] FileExtend:255 - Standard Zip Deflate
+2024-04-19 16:57:35,624 [INFO] ServerAccessManage:473 - Download File PacksControlFlags.xml
+2024-04-19 16:57:35,716 [INFO] ServerAccessManage:473 - Download File cubemx.pidx
+2024-04-19 16:57:35,984 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.FP-ATR-ASTRA1.pdsc
+2024-04-19 16:57:36,596 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.FP-ATR-SIGFOX1.pdsc
+2024-04-19 16:57:36,789 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.FP-SNS-FLIGHT1.pdsc
+2024-04-19 16:57:36,896 [WARN] MainUpdater:1194 - Updater busy. Cannot search thirdparties
+2024-04-19 16:57:36,896 [INFO] ThirdPartyUpdaterWithRetryManager:96 - Updater plugin is busy. [1/15]
+2024-04-19 16:57:37,126 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.FP-SNS-MOTENV1.pdsc
+2024-04-19 16:57:37,540 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.FP-SNS-MOTENVWB1.pdsc
+2024-04-19 16:57:37,705 [INFO] McuFinderGlobals:63 - Set McuFinder mode to 2 (CubeIDE integrated)
+2024-04-19 16:57:37,922 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.FP-SNS-SMARTAG2.pdsc
+2024-04-19 16:57:38,101 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.X-CUBE-AI.pdsc
+2024-04-19 16:57:38,848 [INFO] WebApp:161 - Instantiating new browser for Auth
+2024-04-19 16:57:39,204 [INFO] WebApp:779 - Register for checkConnection events
+2024-04-19 16:57:39,204 [INFO] WebApp:414 - Apply proxy settings
+2024-04-19 16:57:39,204 [INFO] WebApp:499 - Chromium requires no authentication
+2024-04-19 16:57:39,209 [INFO] WebApp:442 - Direct internet connection detected
+2024-04-19 16:57:39,316 [INFO] WebApp:192 - Starting web application
+2024-04-19 16:57:39,316 [INFO] WebApp:544 - Web application path used C:\ST\STM32CubeIDE_1.15.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.11.0.202403141607\db\plugins\mcufinder\reactClient1\index.html
+2024-04-19 16:57:39,503 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.X-CUBE-ALS.pdsc
+2024-04-19 16:57:39,788 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.X-CUBE-BLE1.pdsc
+2024-04-19 16:57:39,897 [WARN] MainUpdater:1194 - Updater busy. Cannot search thirdparties
+2024-04-19 16:57:39,897 [INFO] ThirdPartyUpdaterWithRetryManager:96 - Updater plugin is busy. [2/15]
+2024-04-19 16:57:42,204 [ERROR] ServerAccessManage:1089 - Problem, file not found on Server
+2024-04-19 16:57:42,296 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.X-CUBE-BLE2.pdsc
+2024-04-19 16:57:42,898 [WARN] MainUpdater:1194 - Updater busy. Cannot search thirdparties
+2024-04-19 16:57:42,899 [INFO] ThirdPartyUpdaterWithRetryManager:96 - Updater plugin is busy. [3/15]
+2024-04-19 16:57:43,115 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.X-CUBE-BLEMGR.pdsc
+2024-04-19 16:57:43,815 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.X-CUBE-DISPLAY.pdsc
+2024-04-19 16:57:44,476 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.X-CUBE-EEPRMA1.pdsc
+2024-04-19 16:57:44,898 [ERROR] ServerAccessManage:1089 - Problem, file not found on Server
+2024-04-19 16:57:45,900 [WARN] MainUpdater:1194 - Updater busy. Cannot search thirdparties
+2024-04-19 16:57:45,901 [INFO] ThirdPartyUpdaterWithRetryManager:96 - Updater plugin is busy. [4/15]
+2024-04-19 16:57:46,246 [ERROR] ServerAccessManage:1089 - Problem, file not found on Server
+2024-04-19 16:57:46,580 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.X-CUBE-FREERTOS.pdsc
+2024-04-19 16:57:46,921 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.X-CUBE-GNSS1.pdsc
+2024-04-19 16:57:48,840 [ERROR] ServerAccessManage:1089 - Problem, file not found on Server
+2024-04-19 16:57:48,902 [WARN] MainUpdater:1194 - Updater busy. Cannot search thirdparties
+2024-04-19 16:57:48,902 [INFO] ThirdPartyUpdaterWithRetryManager:96 - Updater plugin is busy. [5/15]
+2024-04-19 16:57:50,017 [ERROR] ServerAccessManage:1089 - Problem, file not found on Server
+2024-04-19 16:57:50,343 [ERROR] ServerAccessManage:1089 - Problem, file not found on Server
+2024-04-19 16:57:50,663 [ERROR] ServerAccessManage:1089 - Problem, file not found on Server
+2024-04-19 16:57:51,829 [ERROR] ServerAccessManage:1089 - Problem, file not found on Server
+2024-04-19 16:57:51,903 [WARN] MainUpdater:1194 - Updater busy. Cannot search thirdparties
+2024-04-19 16:57:51,903 [INFO] ThirdPartyUpdaterWithRetryManager:96 - Updater plugin is busy. [6/15]
+2024-04-19 16:57:53,000 [ERROR] ServerAccessManage:1089 - Problem, file not found on Server
+2024-04-19 16:57:53,088 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.X-CUBE-ISPU.pdsc
+2024-04-19 16:57:53,473 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.X-CUBE-MEMS1.pdsc
+2024-04-19 16:57:54,906 [WARN] MainUpdater:1194 - Updater busy. Cannot search thirdparties
+2024-04-19 16:57:54,907 [INFO] ThirdPartyUpdaterWithRetryManager:96 - Updater plugin is busy. [7/15]
+2024-04-19 16:57:55,665 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.X-CUBE-NFC4.pdsc
+2024-04-19 16:57:56,890 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.X-CUBE-NFC6.pdsc
+2024-04-19 16:57:57,205 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.X-CUBE-NFC7.pdsc
+2024-04-19 16:57:57,494 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.X-CUBE-SFXS2LP1.pdsc
+2024-04-19 16:57:57,754 [INFO] MainUpdater:2873 - connection check result : 10
+2024-04-19 16:57:57,908 [WARN] MainUpdater:1194 - Updater busy. Cannot search thirdparties
+2024-04-19 16:57:57,908 [INFO] ThirdPartyUpdaterWithRetryManager:96 - Updater plugin is busy. [8/15]
+2024-04-19 16:57:57,953 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.X-CUBE-SAFEA1.pdsc
+2024-04-19 16:57:58,144 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.X-CUBE-SUBG2.pdsc
+2024-04-19 16:57:59,007 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.X-CUBE-SMBUS.pdsc
+2024-04-19 16:58:00,290 [ERROR] ServerAccessManage:1089 - Problem, file not found on Server
+2024-04-19 16:58:00,381 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.X-CUBE-TCPP.pdsc
+2024-04-19 16:58:00,562 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.X-CUBE-TOF1.pdsc
+2024-04-19 16:58:00,910 [WARN] MainUpdater:1194 - Updater busy. Cannot search thirdparties
+2024-04-19 16:58:00,910 [INFO] ThirdPartyUpdaterWithRetryManager:96 - Updater plugin is busy. [9/15]
+2024-04-19 16:58:02,466 [ERROR] ServerAccessManage:1089 - Problem, file not found on Server
+2024-04-19 16:58:02,628 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.X-CUBE-TOUCHGFX.pdsc
+2024-04-19 16:58:03,678 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] java.lang.NullPointerException: Cannot invoke "org.eclipse.ui.IWorkbenchWindow.getShell()" because the return value of "org.eclipse.ui.IWorkbench.getActiveWorkbenchWindow()" is null
+2024-04-19 16:58:03,680 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.common.mx.targetselector.TargetSelectorAdapter.launchMCUFinder(TargetSelectorAdapter.java:284)
+2024-04-19 16:58:03,681 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.common.mx.targetselector.TargetSelectorAdapter.addTargetSelector(TargetSelectorAdapter.java:181)
+2024-04-19 16:58:03,684 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.common.projectcreation.ui.wizard.TargetSetupPageAbstract.createControl(TargetSetupPageAbstract.java:131)
+2024-04-19 16:58:03,685 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.jface.wizard.Wizard.createPageControls(Wizard.java:180)
+2024-04-19 16:58:03,686 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.jface.wizard.WizardDialog.createPageControls(WizardDialog.java:744)
+2024-04-19 16:58:03,688 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.jface.wizard.WizardDialog.createContents(WizardDialog.java:636)
+2024-04-19 16:58:03,689 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.jface.window.Window.create(Window.java:431)
+2024-04-19 16:58:03,689 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1094)
+2024-04-19 16:58:03,690 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.jface.window.Window.open(Window.java:788)
+2024-04-19 16:58:03,691 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.stm32cube.ide.mcu.informationcenter.WelcomePageAction.run(WelcomePageAction.java:54)
+2024-04-19 16:58:03,692 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.ui.internal.intro.impl.model.url.IntroURL.runAction(IntroURL.java:279)
+2024-04-19 16:58:03,692 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.ui.internal.intro.impl.model.url.IntroURL.doExecute(IntroURL.java:190)
+2024-04-19 16:58:03,693 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.ui.internal.intro.impl.model.url.IntroURL.lambda$0(IntroURL.java:145)
+2024-04-19 16:58:03,694 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+2024-04-19 16:58:03,695 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.ui.internal.intro.impl.model.url.IntroURL.execute(IntroURL.java:145)
+2024-04-19 16:58:03,696 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.ui.internal.intro.impl.presentations.BrowserIntroPartLocationListener.changing(BrowserIntroPartLocationListener.java:130)
+2024-04-19 16:58:03,697 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.swt.browser.IE.lambda$6(IE.java:525)
+2024-04-19 16:58:03,699 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.swt.ole.win32.OleEventTable.sendEvent(OleEventTable.java:57)
+2024-04-19 16:58:03,701 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.swt.ole.win32.OleEventSink.notifyListener(OleEventSink.java:160)
+2024-04-19 16:58:03,703 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.swt.ole.win32.OleEventSink.Invoke(OleEventSink.java:128)
+2024-04-19 16:58:03,705 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.swt.ole.win32.OleEventSink$1.method6(OleEventSink.java:79)
+2024-04-19 16:58:03,706 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.swt.internal.ole.win32.COMObject.callback6(COMObject.java:120)
+2024-04-19 16:58:03,707 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+2024-04-19 16:58:03,709 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3657)
+2024-04-19 16:58:03,711 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+2024-04-19 16:58:03,713 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+2024-04-19 16:58:03,714 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+2024-04-19 16:58:03,717 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+2024-04-19 16:58:03,718 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
+2024-04-19 16:58:03,720 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+2024-04-19 16:58:03,722 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
+2024-04-19 16:58:03,724 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+2024-04-19 16:58:03,727 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+2024-04-19 16:58:03,730 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+2024-04-19 16:58:03,734 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+2024-04-19 16:58:03,737 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+2024-04-19 16:58:03,739 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+2024-04-19 16:58:03,741 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+2024-04-19 16:58:03,743 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2024-04-19 16:58:03,744 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+2024-04-19 16:58:03,746 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+2024-04-19 16:58:03,747 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+2024-04-19 16:58:03,748 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+2024-04-19 16:58:03,750 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+2024-04-19 16:58:03,751 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+2024-04-19 16:58:03,908 [ERROR] ExternalUserPreferencesManager:606 - Error while get path from external application: Cannot invoke "com.st.stm32cube.common.mx.MxActivator.getBundle()" because the return value of "com.st.stm32cube.common.mx.MxActivator.getDefault()" is null
+2024-04-19 16:58:03,909 [ERROR] ExternalUserPreferencesManager:336 - Error while get preference info from external application: Cannot invoke "com.st.stm32cube.common.mx.MxActivator.getBundle()" because the return value of "com.st.stm32cube.common.mx.MxActivator.getDefault()" is null
+2024-04-19 16:58:03,909 [ERROR] ExternalUserPreferencesManager:560 - Error while get preference info from external application: Cannot invoke "com.st.stm32cube.common.mx.MxActivator.getBundle()" because the return value of "com.st.stm32cube.common.mx.MxActivator.getDefault()" is null
+2024-04-19 16:58:03,910 [WARN] MainUpdater:1194 - Updater busy. Cannot search thirdparties
+2024-04-19 16:58:03,910 [INFO] ThirdPartyUpdaterWithRetryManager:96 - Updater plugin is busy. [10/15]
+2024-04-19 16:58:03,943 [ERROR] ExternalUserPreferencesManager:560 - Error while get preference info from external application: Cannot invoke "com.st.stm32cube.common.mx.MxActivator.getBundle()" because the return value of "com.st.stm32cube.common.mx.MxActivator.getDefault()" is null
+2024-04-19 16:58:03,981 [ERROR] ExternalUserPreferencesManager:560 - Error while get preference info from external application: Cannot invoke "com.st.stm32cube.common.mx.MxActivator.getBundle()" because the return value of "com.st.stm32cube.common.mx.MxActivator.getDefault()" is null
+2024-04-19 16:58:04,024 [ERROR] ExternalUserPreferencesManager:560 - Error while get preference info from external application: Cannot invoke "com.st.stm32cube.common.mx.MxActivator.getBundle()" because the return value of "com.st.stm32cube.common.mx.MxActivator.getDefault()" is null
+2024-04-19 16:58:04,065 [ERROR] ExternalUserPreferencesManager:560 - Error while get preference info from external application: Cannot invoke "com.st.stm32cube.common.mx.MxActivator.getBundle()" because the return value of "com.st.stm32cube.common.mx.MxActivator.getDefault()" is null
+2024-04-19 16:58:04,101 [ERROR] ExternalUserPreferencesManager:560 - Error while get preference info from external application: Cannot invoke "com.st.stm32cube.common.mx.MxActivator.getBundle()" because the return value of "com.st.stm32cube.common.mx.MxActivator.getDefault()" is null
+2024-04-19 16:58:04,140 [ERROR] ExternalUserPreferencesManager:560 - Error while get preference info from external application: Cannot invoke "com.st.stm32cube.common.mx.MxActivator.getBundle()" because the return value of "com.st.stm32cube.common.mx.MxActivator.getDefault()" is null
+2024-04-19 16:58:04,178 [ERROR] ExternalUserPreferencesManager:560 - Error while get preference info from external application: Cannot invoke "com.st.stm32cube.common.mx.MxActivator.getBundle()" because the return value of "com.st.stm32cube.common.mx.MxActivator.getDefault()" is null
+2024-04-19 16:58:04,217 [ERROR] ExternalUserPreferencesManager:560 - Error while get preference info from external application: Cannot invoke "com.st.stm32cube.common.mx.MxActivator.getBundle()" because the return value of "com.st.stm32cube.common.mx.MxActivator.getDefault()" is null
+2024-04-19 16:58:04,260 [ERROR] ExternalUserPreferencesManager:560 - Error while get preference info from external application: Cannot invoke "com.st.stm32cube.common.mx.MxActivator.getBundle()" because the return value of "com.st.stm32cube.common.mx.MxActivator.getDefault()" is null
+2024-04-19 16:58:04,301 [ERROR] ExternalUserPreferencesManager:560 - Error while get preference info from external application: Cannot invoke "com.st.stm32cube.common.mx.MxActivator.getBundle()" because the return value of "com.st.stm32cube.common.mx.MxActivator.getDefault()" is null
+2024-04-19 16:58:04,341 [ERROR] ExternalUserPreferencesManager:560 - Error while get preference info from external application: Cannot invoke "com.st.stm32cube.common.mx.MxActivator.getBundle()" because the return value of "com.st.stm32cube.common.mx.MxActivator.getDefault()" is null
+2024-04-19 16:58:04,382 [ERROR] ExternalUserPreferencesManager:560 - Error while get preference info from external application: Cannot invoke "com.st.stm32cube.common.mx.MxActivator.getBundle()" because the return value of "com.st.stm32cube.common.mx.MxActivator.getDefault()" is null
+2024-04-19 16:58:04,427 [ERROR] ExternalUserPreferencesManager:560 - Error while get preference info from external application: Cannot invoke "com.st.stm32cube.common.mx.MxActivator.getBundle()" because the return value of "com.st.stm32cube.common.mx.MxActivator.getDefault()" is null
+2024-04-19 16:58:04,475 [ERROR] ExternalUserPreferencesManager:560 - Error while get preference info from external application: Cannot invoke "com.st.stm32cube.common.mx.MxActivator.getBundle()" because the return value of "com.st.stm32cube.common.mx.MxActivator.getDefault()" is null
+2024-04-19 16:58:04,514 [ERROR] ExternalUserPreferencesManager:560 - Error while get preference info from external application: Cannot invoke "com.st.stm32cube.common.mx.MxActivator.getBundle()" because the return value of "com.st.stm32cube.common.mx.MxActivator.getDefault()" is null
+2024-04-19 16:58:04,558 [ERROR] ExternalUserPreferencesManager:560 - Error while get preference info from external application: Cannot invoke "com.st.stm32cube.common.mx.MxActivator.getBundle()" because the return value of "com.st.stm32cube.common.mx.MxActivator.getDefault()" is null
+2024-04-19 16:58:04,587 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 

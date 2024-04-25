@@ -1,0 +1,9 @@
+../Core/driver/LCD/LCD.c:15:6:LCD_cmdMode	4	static
+../Core/driver/LCD/LCD.c:18:6:LCD_charMode	4	static
+../Core/driver/LCD/LCD.c:21:6:LCD_writeMode	4	static
+../Core/driver/LCD/LCD.c:24:6:LCD_E_High	4	static
+../Core/driver/LCD/LCD.c:27:6:LCD_E_Low	4	static
+../Core/driver/LCD/LCD.c:34:6:LCD_sendNibble	16	static
+../Core/driver/LCD/LCD.c:42:6:LCD_sendByte	16	static
+../Core/driver/LCD/LCD.c:51:6:LCD_writeCmdData	16	static
+../Core/driver/LCD/LCD.c:56:6:LCD_writeCharData	16	static

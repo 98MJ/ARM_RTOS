@@ -1,0 +1,109 @@
+/*
+ * UltraSonic.c
+ *
+ *  Created on: Apr 24, 2024
+ *      Author: kccistc
+ */
+
+#include "UltraSonic.h"
+
+extern TIM_HandleTypeDef htim1;
+
+void ultra_init(ultra_t *ultra, GPIO_TypeDef* GPIOxT, uint16_t GPIO_PinT, GPIO_TypeDef* GPIOxE, uint16_t GPIO_PinE){
+	ultra->GPIOx_Trig = GPIOxT;
+	ultra->GPIOx_Echo = GPIOxE;
+	ultra->GPIO_Pin_Trig = GPIO_PinT;
+	ultra->GPIO_Pin_Echo = GPIO_PinE;
+}
+
+void DelayInit(void) {
+   CoreDebug->DEMCR &= ~CoreDebug_DEMCR_TRCENA_Msk;
+   CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
+
+   DWT->CTRL &= ~DWT_CTRL_CYCCNTENA_Msk; //~0x00000001;
+   DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk; //0x00000001;
+
+   DWT->CYCCNT = 0;
+
+   /* 3 NO OPERATION instructions */
+   __ASM volatile ("NOP");
+   __ASM volatile ("NOP");
+   __ASM volatile ("NOP");
+}
+
+void DelayUS(uint32_t us) {
+   uint32_t cycles = (SystemCoreClock / 1000000L) * us;
+   uint32_t start = DWT->CYCCNT;
+   volatile uint32_t cnt;
+
+   do {
+      cnt = DWT->CYCCNT - start;
+   } while (cnt < cycles);
+}
+
+uint16_t tim_counter;
+
+int echoFlag = 0;
+
+int UltraSonic_isCmpltRecvEcho(ultra_t *sonic) {
+   return sonic->echoflag;
+}
+void UltraSonic_clearEchoFlag(ultra_t *sonic) {
+	sonic->echoflag = 0;
+}
+void UltraSonic_setEchoFlag(ultra_t *sonic) {
+	sonic->echoflag = 1;
+}
+
+int UltraSonic_getEchopinState(ultra_t *sonic){
+   return HAL_GPIO_ReadPin(sonic->GPIOx_Echo, sonic->GPIO_Pin_Echo);
+}
+void UltraSonic_clearTimer() {
+   __HAL_TIM_SET_COUNTER(&htim1, 0);
+}
+void UltraSonic_startTimer() {
+   HAL_TIM_Base_Start(&htim1);
+}
+void UltraSonic_stopTimer() {
+   HAL_TIM_Base_Stop(&htim1);
+}
+
+uint16_t UltraSonic_getTimerCounter() {
+   return __HAL_TIM_GET_COUNTER(&htim1);
+}
+
+void UltraSonic_ISR_Process(uint16_t GPIO_Pi, ultra_t *sonic) {
+   if (GPIO_Pin == sonic->GPIO_Pin_Echo) {
+      if (UltraSonic_getEchopinState(sonic)) {
+         //인터럽트 발생 시 현재 상태가 1이기때문에 상승엣지
+         UltraSonic_clearTimer();
+         UltraSonic_startTimer();
+         UltraSonic_clearEchoFlag(sonic);
+      } else { // 폴링엣지
+         UltraSonic_stopTimer();
+         sonic->tim_counter = UltraSonic_getTimerCounter();
+         UltraSonic_setEchoFlag(sonic);
+      }
+   }
+}
+
+void UltraSonic_startTrig(ultra_t *sonic) {
+   HAL_GPIO_WritePin(sonic->GPIOx_Trig, sonic->GPIO_Pin_Trig, SET);
+   DelayUS(15);
+   HAL_GPIO_WritePin(sonic->GPIOx_Trig, sonic->GPIO_Pin_Trig, RESET);
+}
+
+int UltraSonic_getDistance(ultra_t *sonic) {
+
+   int timeout = 0;
+
+   UltraSonic_startTrig(sonic);
+   while (!UltraSonic_isCmpltRecvEcho(sonic)) { // echoFlag가 1일때 while문 탈출
+      timeout++;
+      if (timeout > 20)
+         return 0;
+      HAL_Delay(1); //20ms이 넘어가면 while문 탈출 (while문에 갇히는것 방지)
+   }
+   UltraSonic_clearEchoFlag(sonic);
+   return sonic->tim_counter * 0.034 / 2;
+}

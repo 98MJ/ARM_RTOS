@@ -1,0 +1,8 @@
+../Core/ap/apMain.c:19:6:sysTick_count	4	static
+../Core/ap/apMain.c:23:6:sys_init	8	static
+../Core/ap/apMain.c:32:6:ledAlloff	8	static
+../Core/ap/apMain.c:38:6:ledState0	8	static
+../Core/ap/apMain.c:62:6:ledState1	8	static
+../Core/ap/apMain.c:81:6:ledState2	8	static
+../Core/ap/apMain.c:98:6:ledState3	8	static
+../Core/ap/apMain.c:117:5:apMain	8	static

@@ -1,0 +1,159 @@
+
+typedef struct {
+	volatile unsigned int MODER;
+	volatile unsigned int OTYPER;
+	volatile unsigned int OSPEEDR;
+	volatile unsigned int PUPDR;
+	volatile unsigned int IDR;
+	volatile unsigned int ODR;
+	volatile unsigned int BSRR;
+	volatile unsigned int LCKR;
+	volatile unsigned int AFRL;
+	volatile unsigned int AFRH;
+} GPIO_TypeDef;
+
+enum {
+	modeA, modeB, modeC
+};
+enum {
+	SET, RESET
+};
+
+#define AHB1_BASE      0x40020000
+#define RCC_BASE     (AHB1_BASE + 0x3800)
+#define GPIOA_BASE      (AHB1_BASE + 0x0000)
+#define GPIOB_BASE      (AHB1_BASE + 0x0400)
+#define GPIOC_BASE      (AHB1_BASE + 0x0800)
+
+#define RCC_CR			(volatile unsigned int*)(RCC_BASE + 0x00)  //RCC_CR |= (1<<0)
+#define RCC_AHB1ENR		(volatile unsigned int*)(RCC_BASE + 0x30)  // AHB1_ENR, GPIOA enable
+
+#define GPIOA         	((GPIO_TypeDef*)GPIOA_BASE)
+
+#define GPIOA_MODER   	(volatile unsigned int*)(GPIOA_BASE + 0x00)
+#define GPIOA_OTYPER   	(volatile unsigned int*)(GPIOA_BASE + 0x04)
+#define GPIOA_OSPEEDR   (volatile unsigned int*)(GPIOA_BASE + 0x08)
+#define GPIOA_PUPDR   	(volatile unsigned int*)(GPIOA_BASE + 0x0C)
+#define GPIOA_IDR      	(volatile unsigned int*)(GPIOA_BASE + 0x10)
+#define GPIOA_ODR      	(volatile unsigned int*)(GPIOA_BASE+ 0x14)
+#define GPIOA_BSRR      (volatile unsigned int*)(GPIOA_BASE + 0x18)
+#define GPIOA_LCKR      (volatile unsigned int*)(GPIOA_BASE + 0x1C)
+#define GPIOA_AFRL      (volatile unsigned int*)(GPIOA_BASE + 0x20)
+#define GPIOA_AFRH      (volatile unsigned int*)(GPIOA_BASE + 0x24)
+#define GPIOB         	((GPIO_TypeDef*)GPIOB_BASE)
+#define GPIOC         	((GPIO_TypeDef*)GPIOC_BASE)
+
+void delay(unsigned int times) {
+	unsigned int temp = times * 1000;
+	while (temp)
+		temp--;
+}
+
+void clock_init() {
+//   RCC-> CR |= (1 << 0);
+	*RCC_CR |= (1 << 0); // offset = 0x00
+//   RCC-> AHB1ENR |= (1 << 0);
+	*RCC_AHB1ENR |= (1 << 0); // 0 : GPIOA
+//   RCC-> AHB1ENR |= (1 << 2);
+	*RCC_AHB1ENR |= (1 << 2);
+}
+
+void gpio_init() {
+	// GPIOA Output
+	//*GPIOA_MODER &= ~(1 << 11); // GPIOA_MODER 5 (01 : General Purpose Output)
+	//*GPIOA_MODER |= (1 << 10); // GPIOA_MODER 5 (01 : General Purpose Output)
+	GPIOA->MODER &= ~(1 << 11);
+	GPIOA->MODER |= (1 << 10);
+	//*GPIOA_OTYPER &= ~(1 << 5); // GPIOA_5 push-pull
+	GPIOA->OTYPER &= ~(1 << 5);
+	//*GPIOA_OSPEEDR &= ~(1 << 11 | 1 << 10); // output speed : LOW
+	GPIOA->OSPEEDR &= ~(1 << 11 | 1 << 10);
+
+	GPIOC->MODER &= ~(1 << 17 | 1 << 13 | 1 << 11);
+	GPIOC->MODER |= (1 << 16 | 1 << 12 | 1 << 10);
+	GPIOC->MODER &= ~(1 << 21 | 1 << 23 | 1 << 25);
+	GPIOC->MODER &= ~(1 << 20 | 1 << 22 | 1 << 24);
+	GPIOC->OTYPER &= ~(1 << 8 | 1 << 6 | 1 << 5);
+	GPIOC->OSPEEDR &= ~(1 << 17 | 1 << 16 | 1 << 13 | 1 << 12 | 1 << 11
+			| 1 << 10);
+	//GPIOC-> PUPDR &= ~(1<<20 | 1<<21 | 1<<22 | 1<<23 |1<<24 | 1<<25);
+}
+
+void sys_init() {
+	clock_init();
+	gpio_init();
+}
+
+void GPIO_write(GPIO_TypeDef *GPIOx, int pin, int state) {
+	if (state == SET) {
+		GPIOx->ODR |= (1 << pin);
+	} else {
+		GPIOx->ODR &= ~(1 << pin);
+	}
+}
+void GPIO_toggle(GPIO_TypeDef *GPIOx, int pin) {
+	GPIOx->ODR ^= (1 << pin);
+}
+
+unsigned int GPIO_read(GPIO_TypeDef *GPIOx, int pin){
+	if(GPIOx->IDR & (1 << pin)) return 1;
+	else return 0;
+}
+
+int main() {
+
+	sys_init();
+	//GPIO_toggle(GPIOC, 8);
+	GPIO_write(GPIOC, 8, RESET);
+	GPIO_write(GPIOC, 6, RESET);
+	GPIO_write(GPIOC, 5, RESET);
+
+	unsigned button_state = modeA;
+
+	while (1) {
+		/*
+		 GPIO_write(GPIOA, 5, SET);
+		 //GPIOA->ODR |= (1 << 5);
+		 GPIOC->ODR &= ~(1 << 8);
+		 delay(200);
+		 GPIO_write(GPIOA, 5, RESET);
+		 //GPIOA->ODR &= ~(1 << 5);
+		 GPIOC->ODR |= (1 << 8);
+		 delay(200);*/
+		//GPIO_toggle(GPIOA, 5);
+		/*GPIO_toggle(GPIOC, 5);
+		 GPIO_toggle(GPIOC, 6);
+		 GPIO_toggle(GPIOC, 8);*/
+
+
+
+		if ((GPIOC->IDR & (1 << 10)) == 0) {
+			button_state = modeA;
+		}
+		if (GPIO_read(GPIOC, 11) == 0) {
+			button_state = modeB;
+		}
+		if ((GPIOC->IDR & (1 << 12)) == 0) {
+			button_state = modeC;
+		}
+
+		if (button_state == modeA) {
+			GPIO_toggle(GPIOC, 8);
+			GPIO_write(GPIOC, 6, RESET);
+			GPIO_write(GPIOC, 5, RESET);
+		}
+		if (button_state == modeB) {
+			GPIO_toggle(GPIOC, 6);
+			GPIO_write(GPIOC, 8, RESET);
+			GPIO_write(GPIOC, 5, RESET);
+		}
+		if (button_state == modeC) {
+			GPIO_toggle(GPIOC, 5);
+			GPIO_write(GPIOC, 8, RESET);
+			GPIO_write(GPIOC, 6, RESET);
+		}
+
+		delay(200);
+	}
+	return 0;
+}

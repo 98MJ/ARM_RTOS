@@ -1,0 +1,81 @@
+#include "stm32f4xx_hal.h"
+#include "rcc.h"
+#include "gpio.h"
+
+typedef enum{LED1, LED2, LED3} ledState_t;
+ledState_t state;
+
+void delay(unsigned int times){
+	unsigned int temp = times * 1000;
+	while(temp) temp--;
+}
+
+void sys_init()
+{
+   rcc_init();
+   gpio_init();
+}
+
+void LED1_stateRun(){
+	GPIO_toggle(GPIOC, 8);
+	GPIO_write(GPIOC, 6, RESET);
+	GPIO_write(GPIOC, 5, RESET);
+	delay(100);
+
+	if (!GPIO_read(GPIOC, 11)) {
+		state = LED2;
+	} else if (!GPIO_read(GPIOC, 12)) {
+		state = LED3;
+	}
+}
+
+void LED2_stateRun(){
+	GPIO_toggle(GPIOC, 6);
+	GPIO_write(GPIOC, 8, RESET);
+	GPIO_write(GPIOC, 5, RESET);
+	delay(100);
+
+	if (!GPIO_read(GPIOC, 10)) {
+		state = LED1;
+	} else if (!GPIO_read(GPIOC, 12)) {
+		state = LED3;
+	}
+}
+
+void LED3_stateRun(){
+	GPIO_toggle(GPIOC, 5);
+	GPIO_write(GPIOC, 8, RESET);
+	GPIO_write(GPIOC, 6, RESET);
+	delay(100);
+
+	if (!GPIO_read(GPIOC, 10)) {
+		state = LED1;
+	} else if (!GPIO_read(GPIOC, 11)) {
+		state = LED2;
+	}
+}
+
+int main(){
+
+   sys_init();
+   state = LED1;
+
+   while(1)
+   {
+      switch (state){
+      case LED1:
+    	  LED1_stateRun();
+    	  break;
+      case LED2:
+    	  LED2_stateRun();
+    	  break;
+      case LED3:
+    	  LED3_stateRun();
+    	  break;
+      default:
+    	  LED1_stateRun();
+      }
+   }
+
+   return 0;
+}

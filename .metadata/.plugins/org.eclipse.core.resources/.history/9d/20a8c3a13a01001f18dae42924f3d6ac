@@ -1,0 +1,12 @@
+/*
+ * sys_init.c
+ *
+ *  Created on: Apr 23, 2024
+ *      Author: kccistc
+ */
+
+#include "sys_init.h"
+
+void sys_init(){
+
+}

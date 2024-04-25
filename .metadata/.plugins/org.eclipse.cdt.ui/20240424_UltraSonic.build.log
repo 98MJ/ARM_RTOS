@@ -1,0 +1,16 @@
+10:43:12 **** Incremental Build of configuration Debug for project 20240424_UltraSonic ****
+make -j16 all 
+arm-none-eabi-gcc -o "20240424_UltraSonic.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kccistc\STM32CubeIDE\workspace_1.15.0\20240424_UltraSonic\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="20240424_UltraSonic.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 20240424_UltraSonic.elf
+ 
+arm-none-eabi-size  20240424_UltraSonic.elf 
+arm-none-eabi-objdump -h -S 20240424_UltraSonic.elf  > "20240424_UltraSonic.list"
+   text	   data	    bss	    dec	    hex	filename
+  19412	     92	   2244	  21748	   54f4	20240424_UltraSonic.elf
+Finished building: default.size.stdout
+ 
+Finished building: 20240424_UltraSonic.list
+ 
+
+10:43:13 Build Finished. 0 errors, 0 warnings. (took 335ms)
+

@@ -1,0 +1,51 @@
+#include "stm32f4xx.h"
+
+void rcc_init(){
+	RCC->CR |= (1<<0); // HSI ON
+	RCC->AHB1ENR |= (1<<2); // GPIOC Clock Enable
+}
+void gpio_init(){
+	GPIOC->MODER |= (0x01 << 10 | 0x01 << 12
+			| 0x01 << 16);
+	GPIOC->OTYPER &= ~(1<<5 | 1<<6 | 1<<8);
+
+	GPIOC->MODER &= ~(0x03<<20 | 0x03<<22 | 0x03 << 24);
+	GPIOC->PUPDR &= ~(0x03<<20 | 0x03<<22 | 0x03 << 24);
+}
+void sys_init(){
+	rcc_init();
+	gpio_init();
+}
+
+void GPIO_write(GPIO_TypeDef *GPIOx, uint16_t pin, int state){
+	if(state == RESET){
+		GPIOx->ODR &= ~(1<<pin);
+	} else {
+		GPIOx->ODR |= (1<<pin);
+	}
+}
+int GPIO_read(GPIO_TypeDef *GPIOx, uint16_t pin){
+	if(GPIOx->IDR & (1<<pin)==0) return 0;
+	// 마스킹(&)결과는 값 출력 -> 0과 비교하여 0인지 그외의 값인지 비교
+	else return 1;
+}
+
+int main(){
+
+	sys_init();
+
+	while(1){
+		if (!GPIO_read(GPIOC, 10)) {
+			GPIO_write(GPIOC, 8, SET);
+		} else GPIO_write(GPIOC, 8, RESET);
+		if (!GPIO_read(GPIOC, 11)) {
+			GPIO_write(GPIOC, 6, SET);
+		} else GPIO_write(GPIOC, 6, RESET);
+		if (!GPIO_read(GPIOC, 12)) {
+			GPIO_write(GPIOC, 5, SET);
+		} else GPIO_write(GPIOC, 5, RESET);
+
+
+	}
+	return 0;
+}

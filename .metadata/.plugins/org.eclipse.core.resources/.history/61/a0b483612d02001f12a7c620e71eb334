@@ -1,0 +1,38 @@
+/*
+ * UltraSonic.h
+ *
+ *  Created on: Apr 24, 2024
+ *      Author: kccistc
+ */
+
+#ifndef DRIVER_ULTRASONIC_ULTRASONIC_H_
+#define DRIVER_ULTRASONIC_ULTRASONIC_H_
+
+#include "stm32f4xx.h"
+#include "stm32f4xx_hal.h"
+
+typedef struct {
+	GPIO_TypeDef* GPIOx;
+	uint16_t GPIO_Pin;
+	uint16_t tim_counter;
+	uint8_t distance;
+}ultra_t;
+
+void ultra_init(ultra_t *ultra, GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
+
+void DelayInit(void);
+void DelayUS(uint32_t us);
+
+int UltraSonic_isCmpltRecvEcho();
+void UltraSonic_clearEchoFlag();
+void UltraSonic_setEchoFlag();
+int UltraSonic_getEchopinState();
+void UltraSonic_clearTimer();
+void UltraSonic_startTimer();
+void UltraSonic_stopTimer();
+uint16_t UltraSonic_getTimerCounter();
+void UltraSonic_ISR_Process(uint16_t GPIO_Pin, ultra_t *sonic);
+void UltraSonic_startTrig();
+int UltraSonic_getDistance(ultra_t *ultra);
+
+#endif /* DRIVER_ULTRASONIC_ULTRASONIC_H_ */

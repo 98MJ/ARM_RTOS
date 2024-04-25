@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;20240423_button_led_hal/Core/AP&apos; to &apos;ap&apos;" description="Rename resource &apos;AP&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/AP" name="ap" stamp="1713853341157" updateReferences="true"/>
+</session>

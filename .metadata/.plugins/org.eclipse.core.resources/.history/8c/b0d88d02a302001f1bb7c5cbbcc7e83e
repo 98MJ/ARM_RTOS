@@ -1,0 +1,96 @@
+/*
+ * UltraSonic.c
+ *
+ *  Created on: Apr 24, 2024
+ *      Author: kccistc
+ */
+
+#include "UltraSonic.h"
+#include "../../driver/UltraSonic/UltraSonic.h"
+
+extern TIM_HandleTypeDef htim1;
+
+void ultra_init(
+		ultra_t *ultra,
+		TIM_HandleTypeDef *hTim,
+		GPIO_TypeDef* GPIOxT,
+		uint16_t GPIO_PinT,
+		GPIO_TypeDef* GPIOxE,
+		uint16_t GPIO_PinE){
+	ultra->hTim = hTim;
+	ultra->GPIOx_Trig = GPIOxT;
+	ultra->GPIOx_Echo = GPIOxE;
+	ultra->GPIO_Pin_Trig = GPIO_PinT;
+	ultra->GPIO_Pin_Echo = GPIO_PinE;
+	ultra->tim_counter = 0;
+	ultra->echoflag = 0;
+}
+
+
+
+uint16_t tim_counter;
+
+int echoFlag = 0;
+
+int UltraSonic_isCmpltRecvEcho(ultra_t *sonic) {
+   return sonic->echoflag;
+}
+void UltraSonic_clearEchoFlag(ultra_t *sonic) {
+	sonic->echoflag = 0;
+}
+void UltraSonic_setEchoFlag(ultra_t *sonic) {
+	sonic->echoflag = 1;
+}
+
+int UltraSonic_getEchopinState(ultra_t *sonic){
+   return HAL_GPIO_ReadPin(sonic->GPIOx_Echo, sonic->GPIO_Pin_Echo);
+}
+void UltraSonic_clearTimer(ultra_t *sonic) {
+   __HAL_TIM_SET_COUNTER(sonic->hTim, 0);
+}
+void UltraSonic_startTimer(ultra_t *sonic) {
+   HAL_TIM_Base_Start(sonic->hTim);
+}
+void UltraSonic_stopTimer(ultra_t *sonic) {
+   HAL_TIM_Base_Stop(sonic->hTim);
+}
+
+uint16_t UltraSonic_getTimerCounter(ultra_t *sonic) {
+   return __HAL_TIM_GET_COUNTER(sonic->hTim);
+}
+
+void UltraSonic_ISR_Process(uint16_t GPIO_Pin, ultra_t *sonic) {
+   if (GPIO_Pin == sonic->GPIO_Pin_Echo) {
+      if (UltraSonic_getEchopinState(sonic)) {
+         //인터럽트 발생 시 현재 상태가 1이기때문에 상승엣지
+         UltraSonic_clearTimer(sonic);
+         UltraSonic_startTimer(sonic);
+         UltraSonic_clearEchoFlag(sonic);
+      } else { // 폴링엣지
+         UltraSonic_stopTimer(sonic);
+         sonic->tim_counter = UltraSonic_getTimerCounter(sonic);
+         UltraSonic_setEchoFlag(sonic);
+      }
+   }
+}
+
+void UltraSonic_startTrig(ultra_t *sonic) {
+   HAL_GPIO_WritePin(sonic->GPIOx_Trig, sonic->GPIO_Pin_Trig, SET);
+   DelayUS(15);
+   HAL_GPIO_WritePin(sonic->GPIOx_Trig, sonic->GPIO_Pin_Trig, RESET);
+}
+
+int UltraSonic_getDistance(ultra_t *sonic) {
+
+   int timeout = 0;
+
+   UltraSonic_startTrig(sonic);
+   while (!UltraSonic_isCmpltRecvEcho(sonic)) { // echoFlag가 1일때 while문 탈출
+      timeout++;
+      if (timeout > 20)
+         return 0;
+      HAL_Delay(1); //20ms이 넘어가면 while문 탈출 (while문에 갇히는것 방지)
+   }
+   UltraSonic_clearEchoFlag(sonic);
+   return sonic->tim_counter * 0.034 / 2;
+}

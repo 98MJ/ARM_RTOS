@@ -1,0 +1,38 @@
+#include "stm32f4xx_hal.h"
+#include "rcc.h"
+#include "gpio.h"
+
+void sys_init()
+{
+   rcc_init();
+   gpio_init();
+}
+
+int main(){
+
+   sys_init();
+   while(1)
+   {
+      if(!GPIO_read(GPIOC,10)){
+         GPIO_write(GPIOC,8,SET);
+      }
+      else{
+         GPIO_write(GPIOC,8,RESET);
+      }
+      if(!GPIO_read(GPIOC,11)){
+         GPIO_write(GPIOC,6,SET);
+      }
+      else{
+         GPIO_write(GPIOC,6,RESET);
+      }
+      if(!GPIO_read(GPIOC,12)){
+         GPIO_write(GPIOC,5,SET);
+      }
+      else{
+         GPIO_write(GPIOC,5,RESET);
+      }
+
+   }
+
+   return 0;
+}
