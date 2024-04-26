@@ -1,3 +1,4 @@
-../Core/ap/apMain.c:21:6:sys_init	16	static
-../Core/ap/apMain.c:35:5:apMain	64	static
-../Core/ap/apMain.c:67:6:HAL_GPIO_EXTI_Callback	16	static
+../Core/ap/apMain.c:25:6:timeTick	4	static
+../Core/ap/apMain.c:29:6:sys_init	24	static
+../Core/ap/apMain.c:47:5:apMain	64	static
+../Core/ap/apMain.c:116:6:HAL_GPIO_EXTI_Callback	16	static

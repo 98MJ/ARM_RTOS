@@ -30,5 +30,4 @@ Core/driver/UltraSonic \
 Core/driver/button \
 Core/driver/led \
 Drivers/STM32F4xx_HAL_Driver/Src \
-Core/common/delayus \
 

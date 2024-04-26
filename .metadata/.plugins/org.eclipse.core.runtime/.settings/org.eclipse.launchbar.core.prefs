@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:20240422_LedBlink Debug (1),org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20240422_LedBlink Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20240423_led_btn_blink Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20240423_button_led_hal Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20240424_LedBlink_FSM Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20240424_UltraSonic Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20240425_US Debug
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:20240422_LedBlink Debug (1),org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20240422_LedBlink Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20240423_button_led_hal Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20240423_led_btn_blink Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20240424_LedBlink_FSM Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20240424_UltraSonic Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20240425_US Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20240426_UART Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20240426_RC_car Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20240422_LedBlink\ Debug/activeLaunchTarget=null\:---
 org.eclipse.launchbar.core.descriptorType.default\:20240422_LedBlink\ Debug\ (1)/activeLaunchMode=run

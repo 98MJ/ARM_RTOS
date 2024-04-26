@@ -1,15 +1,156 @@
-11:31:36 **** Incremental Build of configuration Debug for project 20240425_US ****
+18:34:48 **** Incremental Build of configuration Debug for project 20240426_RC_car ****
 make -j16 all 
+arm-none-eabi-gcc "../Core/ap/RC_Car/Controller.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/RC_Car/Controller.d" -MT"Core/ap/RC_Car/Controller.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/RC_Car/Controller.o"
 arm-none-eabi-gcc "../Core/ap/apMain.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/apMain.d" -MT"Core/ap/apMain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/apMain.o"
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "20240425_US.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kccistc\STM32CubeIDE\workspace_1.15.0\20240425_US\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="20240425_US.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 20240425_US.elf
+../Core/ap/RC_Car/Controller.c: In function 'Car_excute':
+../Core/ap/RC_Car/Controller.c:12:17: warning: implicit declaration of function 'Car_setDirState' [-Wimplicit-function-declaration]
+   12 |                 Car_setDirState(STOP);
+      |                 ^~~~~~~~~~~~~~~
+../Core/ap/RC_Car/Controller.c: In function 'Car_run':
+../Core/ap/RC_Car/Controller.c:27:17: warning: implicit declaration of function 'Car_prSetDir' [-Wimplicit-function-declaration]
+   27 |                 Car_prSetDir(STOP); // pr = presernter
+      |                 ^~~~~~~~~~~~
+../Core/ap/RC_Car/Controller.c: At top level:
+../Core/ap/RC_Car/Controller.c:47:6: warning: conflicting types for 'Car_setDirState'; have 'void(dirState_t)'
+   47 | void Car_setDirState(dirState_t dir){
+      |      ^~~~~~~~~~~~~~~
+../Core/ap/RC_Car/Controller.c:12:17: note: previous implicit declaration of 'Car_setDirState' with type 'void(dirState_t)'
+   12 |                 Car_setDirState(STOP);
+      |                 ^~~~~~~~~~~~~~~
+../Core/ap/apMain.c: In function 'apMain':
+../Core/ap/apMain.c:61:17: warning: implicit declaration of function 'Car_run' [-Wimplicit-function-declaration]
+   61 |                 Car_run();
+      |                 ^~~~~~~
+../Core/ap/apMain.c:56:14: warning: unused variable 'buff' [-Wunused-variable]
+   56 |         char buff[50];
+      |              ^~~~
+arm-none-eabi-gcc -o "20240426_RC_car.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kccistc\STM32CubeIDE\workspace_1.15.0\20240426_RC_car\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="20240426_RC_car.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 20240426_RC_car.elf
  
-arm-none-eabi-size  20240425_US.elf 
-arm-none-eabi-objdump -h -S 20240425_US.elf  > "20240425_US.list"
+arm-none-eabi-size  20240426_RC_car.elf 
+arm-none-eabi-objdump -h -S 20240426_RC_car.elf  > "20240426_RC_car.list"
    text	   data	    bss	    dec	    hex	filename
-  19588	     92	   2324	  22004	   55f4	20240425_US.elf
+  20200	     12	   2228	  22440	   57a8	20240426_RC_car.elf
 Finished building: default.size.stdout
  
-Finished building: 20240425_US.list
+Finished building: 20240426_RC_car.list
+ 
+18:36:10 **** Incremental Build of configuration Debug for project 20240422_LedBlink ****
+make -j16 all 
+arm-none-eabi-size  20240422_LedBlink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1480	      4	   1572	   3056	    bf0	20240422_LedBlink.elf
+Finished building: default.size.stdout
+ 
+18:36:10 **** Incremental Build of configuration Debug for project 20240423_button_led_hal ****
+make -j16 all 
+arm-none-eabi-size  20240423_button_led_hal.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9708	     12	   1788	  11508	   2cf4	20240423_button_led_hal.elf
+Finished building: default.size.stdout
+ 
+18:36:10 **** Incremental Build of configuration Debug for project 20240423_led_btn_blink ****
+make -j16 all 
+arm-none-eabi-size  20240423_led_btn_blink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1544	      4	   1572	   3120	    c30	20240423_led_btn_blink.elf
+Finished building: default.size.stdout
+ 
+18:36:11 **** Incremental Build of configuration Debug for project 20240424_LedBlink_FSM ****
+make -j16 all 
+arm-none-eabi-size  20240424_LedBlink_FSM.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10692	     12	   1740	  12444	   309c	20240424_LedBlink_FSM.elf
+Finished building: default.size.stdout
+ 
+18:36:11 **** Incremental Build of configuration Debug for project 20240424_UltraSonic ****
+make -j16 all 
+arm-none-eabi-size  20240424_UltraSonic.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19412	     92	   2244	  21748	   54f4	20240424_UltraSonic.elf
+Finished building: default.size.stdout
+ 
+18:36:11 **** Incremental Build of configuration Debug for project 20240425_US ****
+make -j16 all 
+arm-none-eabi-size  20240425_US.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22324	     92	   2516	  24932	   6164	20240425_US.elf
+Finished building: default.size.stdout
+ 
+18:36:11 **** Incremental Build of configuration Debug for project 20240426_RC_car ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/apMain.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/apMain.d" -MT"Core/ap/apMain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/apMain.o"
+../Core/ap/apMain.c:16:8: error: unknown type name 'dirState_t'
+   16 | extern dirState_t carDirState
+      |        ^~~~~~~~~~
+../Core/ap/apMain.c:16:30: error: expected ';' before 'uint8_t'
+   16 | extern dirState_t carDirState
+      |                              ^
+      |                              ;
+   17 | uint8_t rcvData;
+      | ~~~~~~~                       
+../Core/ap/apMain.c: In function 'apMain':
+../Core/ap/apMain.c:62:17: warning: implicit declaration of function 'Car_run' [-Wimplicit-function-declaration]
+   62 |                 Car_run();
+      |                 ^~~~~~~
+../Core/ap/apMain.c:57:14: warning: unused variable 'buff' [-Wunused-variable]
+   57 |         char buff[50];
+      |              ^~~~
+make: *** [Core/ap/subdir.mk:19: Core/ap/apMain.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+18:36:11 **** Incremental Build of configuration Debug for project 20240426_UART ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "20240426_UART.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kccistc\STM32CubeIDE\workspace_1.15.0\20240426_UART\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="20240426_UART.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 20240426_UART.elf
+ 
+arm-none-eabi-size  20240426_UART.elf 
+arm-none-eabi-objdump -h -S 20240426_UART.elf  > "20240426_UART.list"
+   text	   data	    bss	    dec	    hex	filename
+  14488	    104	   2096	  16688	   4130	20240426_UART.elf
+Finished building: default.size.stdout
+ 
+Finished building: 20240426_UART.list
+ 
+18:36:27 **** Incremental Build of configuration Debug for project 20240426_RC_car ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/apMain.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/apMain.d" -MT"Core/ap/apMain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/apMain.o"
+../Core/ap/apMain.c: In function 'apMain':
+../Core/ap/apMain.c:64:17: warning: implicit declaration of function 'Car_run' [-Wimplicit-function-declaration]
+   64 |                 Car_run();
+      |                 ^~~~~~~
+../Core/ap/apMain.c:59:14: warning: unused variable 'buff' [-Wunused-variable]
+   59 |         char buff[50];
+      |              ^~~~
+arm-none-eabi-gcc -o "20240426_RC_car.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kccistc\STM32CubeIDE\workspace_1.15.0\20240426_RC_car\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="20240426_RC_car.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 20240426_RC_car.elf
+ 
+arm-none-eabi-size  20240426_RC_car.elf 
+arm-none-eabi-objdump -h -S 20240426_RC_car.elf  > "20240426_RC_car.list"
+   text	   data	    bss	    dec	    hex	filename
+  20200	     12	   2228	  22440	   57a8	20240426_RC_car.elf
+Finished building: default.size.stdout
+ 
+Finished building: 20240426_RC_car.list
+ 
+18:39:18 **** Incremental Build of configuration Debug for project 20240426_RC_car ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/ap/apMain.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/apMain.d" -MT"Core/ap/apMain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/apMain.o"
+../Core/ap/apMain.c: In function 'apMain':
+../Core/ap/apMain.c:66:17: warning: implicit declaration of function 'Car_run' [-Wimplicit-function-declaration]
+   66 |                 Car_run();
+      |                 ^~~~~~~
+../Core/ap/apMain.c:61:14: warning: unused variable 'buff' [-Wunused-variable]
+   61 |         char buff[50];
+      |              ^~~~
+arm-none-eabi-gcc -o "20240426_RC_car.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\kccistc\STM32CubeIDE\workspace_1.15.0\20240426_RC_car\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="20240426_RC_car.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 20240426_RC_car.elf
+ 
+arm-none-eabi-size  20240426_RC_car.elf 
+arm-none-eabi-objdump -h -S 20240426_RC_car.elf  > "20240426_RC_car.list"
+   text	   data	    bss	    dec	    hex	filename
+  20216	     12	   2228	  22456	   57b8	20240426_RC_car.elf
+Finished building: default.size.stdout
+ 
+Finished building: 20240426_RC_car.list
  

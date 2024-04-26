@@ -14,7 +14,6 @@ RM := rm -rf
 -include Core/driver/button/subdir.mk
 -include Core/driver/UltraSonic/subdir.mk
 -include Core/driver/LCD/subdir.mk
--include Core/common/delayus/subdir.mk
 -include Core/ap/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk

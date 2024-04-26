@@ -30,5 +30,6 @@ Core/driver/LCD \
 Core/driver/UltraSonic \
 Core/driver/button \
 Core/driver/led \
+Core/driver/motor \
 Drivers/STM32F4xx_HAL_Driver/Src \
 

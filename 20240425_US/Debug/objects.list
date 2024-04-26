@@ -11,6 +11,7 @@
 "./Core/driver/UltraSonic/UltraSonic.o"
 "./Core/driver/button/button.o"
 "./Core/driver/led/led.o"
+"./Core/driver/motor/motor.o"
 "./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
 "./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
 "./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"

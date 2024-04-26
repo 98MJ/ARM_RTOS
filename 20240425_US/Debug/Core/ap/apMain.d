@@ -33,6 +33,7 @@ Core/ap/apMain.o: ../Core/ap/apMain.c ../Core/ap/apMain.h \
  ../Core/ap/../driver/led/led.h ../Core/ap/../driver/LCD/LCD.h \
  ../Core/ap/../driver/LCD/LCD.h \
  ../Core/ap/../driver/UltraSonic/UltraSonic.h \
+ ../Core/ap/../driver/motor/motor.h \
  ../Core/ap/../common/delayus/delayus.h
 ../Core/ap/apMain.h:
 ../Core/ap/../driver/button/button.h:
@@ -70,4 +71,5 @@ Core/ap/apMain.o: ../Core/ap/apMain.c ../Core/ap/apMain.h \
 ../Core/ap/../driver/LCD/LCD.h:
 ../Core/ap/../driver/LCD/LCD.h:
 ../Core/ap/../driver/UltraSonic/UltraSonic.h:
+../Core/ap/../driver/motor/motor.h:
 ../Core/ap/../common/delayus/delayus.h:
