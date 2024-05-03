@@ -11,6 +11,7 @@
 #include "../model/BT_dataQue.h"
 #include "../model/ULTRA_data.h"
 #include "../model/ButtonStateQue.h"
+#include "../model/ADC_data.h"
 #include "../common/delayus/delayus.h"
 #include "../../driver/UltraSonic/UltraSonic.h"
 #include "../../driver/button/button.h"
@@ -35,5 +36,6 @@ void Listener_init();
 void Listener_getDistance();
 void Listener_getBtnState();
 void Listener_excuteTask();
+void Listener_ReadADC();
 
 #endif /* AP_LISTENERTASK_LISTENER_H_ */

@@ -13,6 +13,7 @@
 #include "../model/ULTRA_data.h"
 #include "../model/ButtonStateQue.h"
 #include "../model/MovingState.h"
+#include "../model/ADC_data.h"
 
 #include "../driver/LCD/LCD.h"
 

@@ -64,7 +64,6 @@ void Controller_excuteTask() {
 		MotorState_setFlag(SET);
 		BT_setFlag(RESET);
 	}
-
 		//LCD_writeStringXY(1, 0, buff);
 	else if (cbtnState == 1){
 		Controller_AutoDrive();
@@ -80,9 +79,9 @@ void Controller_AutoDrive(){
 		movingStateset(BACK_R);
 	} else if (cData.sonicData1 < 15) {
 		if (cData.sonicData2 > cData.sonicData3) {
-			movingState(BACK_R);
+			movingStateset(BACK_R);
 		} else {
-			movingState(BACK_L);
+			movingStateset(BACK_L);
 		}
 	} else {
 		movingStateset(STRAIGHT);

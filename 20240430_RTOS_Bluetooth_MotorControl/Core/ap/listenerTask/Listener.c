@@ -8,11 +8,14 @@
 #include "Listener.h"
 
 extern TIM_HandleTypeDef htim1, htim2;
+extern ADC_HandleTypeDef hadc1;
+extern DMA_HandleTypeDef hdma_adc1;
 ultra_t sonic1, sonic2, sonic3;
 button_t btnAuto, btnManual;
 
 
 sonic_t sData;
+uint32_t adcVal;
 
 void Listener_ISR_Process(uint8_t rxData) { //데이터가 끝났는지 안끝났지 우선 판단 후에, 안 끝났으면 이후 코드 실행
 	if (rxData == ';') {
@@ -53,9 +56,16 @@ void Listener_getBtnState(){
 void Listener_excuteTask(){
 	Listener_getDistance();
 	Listener_getBtnState();
+	Listener_ReadADC();
 	Ultra_setData(&sData);
 	//char buff[30];
 	//sprintf(buff, "L:%02d F:%02d R:%02d", sData.sonicData1, sData.sonicData2, sData.sonicData3);
 	//LCD_writeStringXY(1, 0, buff);
+}
+
+void Listener_ReadADC(){
+	HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adcVal, 1);
+	adcVal = HAL_ADC_GetValue(&hadc1);
+	cdsSetData(adcVal);
 }
 

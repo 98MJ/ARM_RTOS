@@ -11,8 +11,10 @@
 #include "../model/MotorStateQue.h"
 #include "../model/ULTRA_data.h"
 #include "../model/MovingState.h"
+#include "../model/ADC_data.h"
 
 #include "../../driver/LCD/LCD.h"
+#include "../../driver/led/led.h"
 #include "../../driver/motor/motor.h"
 
 

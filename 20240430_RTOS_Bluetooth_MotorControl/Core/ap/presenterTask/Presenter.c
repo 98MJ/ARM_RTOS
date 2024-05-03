@@ -8,13 +8,19 @@
 #include "Presenter.h"
 
 extern TIM_HandleTypeDef htim3, htim5;
+led_t LED1, LED2, LED3;
 motor_t motorL, motorR;
 sonic_t pData;
 uint8_t pbtnState=3;
+uint32_t cdsData = 0;
 int soundLUT[] = { 130, 146, 164, 174, 196, 220, 246, 261 };
 char buff[30];
 
 void Presenter_init() {
+	led_init(&LED1, GPIOC, GPIO_PIN_8);
+	led_init(&LED2, GPIOC, GPIO_PIN_6);
+	led_init(&LED3, GPIOC, GPIO_PIN_5);
+
 	Motor_init(&motorL, &htim3, TIM_CHANNEL_1, LEFT_DIR1_GPIO,
 	LEFT_DIR1_GPIO_Pin, LEFT_DIR2_GPIO, LEFT_DIR2_GPIO_Pin);
 	Motor_init(&motorR, &htim3, TIM_CHANNEL_2, RIGHT_DIR1_GPIO,
@@ -27,10 +33,18 @@ void Presenter_init() {
 void Presenter_getBtnState(){
 	pbtnState = Button_getFlag();
 }
+void Presenter_getCdsData(){
+	cdsData = cdsGetData();
+}
 
 void Presenter_exeuteTask() {
+	Presenter_getCdsData();
+
+	if(cdsData < 2000){
+		led_on(&LED3);
+	} else led_off(&LED3);
+
 	int motorQueFlag;
-	char buff[30];
 	motorQueFlag = MotorState_getFlag();
 	sprintf(buff, "                       ");
 	LCD_writeStringXY(1, 0, buff);
