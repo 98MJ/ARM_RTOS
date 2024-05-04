@@ -1,9 +1,78 @@
-<mxfile host="app.diagrams.net" modified="2024-05-04T04:13:55.106Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" version="24.3.1" etag="IQfQTtzNJbRk8ZuqWnwr" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-04T09:29:14.797Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="WPdC8xmpOy4fD-KuvCUP" version="24.3.1" type="github">
   <diagram name="페이지-1" id="QHio4SkPQE1KDm1_KO26">
-    <mxGraphModel>
+    <mxGraphModel dx="947" dy="914" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="b-vFOoRrXi_BRpK5fUJM-21" value="Commen" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="990" y="588" width="120" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="b-vFOoRrXi_BRpK5fUJM-48" value="Bluetooth" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="938" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b-vFOoRrXi_BRpK5fUJM-49" value="Cds" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="938" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b-vFOoRrXi_BRpK5fUJM-50" value="LCD" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="938" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b-vFOoRrXi_BRpK5fUJM-51" value="LED" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="938" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b-vFOoRrXi_BRpK5fUJM-52" value="Button" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="938" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b-vFOoRrXi_BRpK5fUJM-53" value="Ultra Sonic" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="938" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b-vFOoRrXi_BRpK5fUJM-54" value="Motor" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="860" y="938" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b-vFOoRrXi_BRpK5fUJM-55" value="Buzzer" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="990" y="938" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b-vFOoRrXi_BRpK5fUJM-56" value="Bluetooth" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="868" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b-vFOoRrXi_BRpK5fUJM-58" value="ADC" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="868" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b-vFOoRrXi_BRpK5fUJM-59" value="I2C" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="868" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b-vFOoRrXi_BRpK5fUJM-61" value="GPIO" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="868" width="320" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b-vFOoRrXi_BRpK5fUJM-63" value="TIM" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="868" width="310" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b-vFOoRrXi_BRpK5fUJM-64" value="HAL" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="798" width="1030" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b-vFOoRrXi_BRpK5fUJM-67" value="Button" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="728" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b-vFOoRrXi_BRpK5fUJM-68" value="UltraSonic" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="728" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b-vFOoRrXi_BRpK5fUJM-69" value="LED" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="728" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b-vFOoRrXi_BRpK5fUJM-70" value="LCD" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="728" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b-vFOoRrXi_BRpK5fUJM-71" value="Motor" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="728" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b-vFOoRrXi_BRpK5fUJM-72" value="Buzzer" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="728" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b-vFOoRrXi_BRpK5fUJM-74" value="RTOS" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="658" width="900" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b-vFOoRrXi_BRpK5fUJM-75" value="RC Car" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="588" width="900" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
