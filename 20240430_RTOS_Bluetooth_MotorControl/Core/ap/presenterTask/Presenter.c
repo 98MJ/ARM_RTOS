@@ -7,13 +7,18 @@
 
 #include "Presenter.h"
 
-extern TIM_HandleTypeDef htim3, htim5;
+extern TIM_HandleTypeDef htim3;
+extern UART_HandleTypeDef huart2;
+
 led_t LED1, LED2, LED3;
 motor_t motorL, motorR;
 sonic_t pData;
 uint8_t pbtnState=3;
 uint32_t cdsData = 0;
+int i=0;
 int soundLUT[] = { 130, 146, 164, 174, 196, 220, 246, 261 };
+int soundTest[] = { 155, 311, 622, 1244};
+int soundBuff[] = {659, 622, 659, 622, 659, 494, 587, 523, 440, 0, 0, 0, 0};
 char buff[30];
 
 void Presenter_init() {
@@ -26,8 +31,8 @@ void Presenter_init() {
 	Motor_init(&motorR, &htim3, TIM_CHANNEL_2, RIGHT_DIR1_GPIO,
 	RIGHT_DIR1_GPIO_Pin, RIGHT_DIR2_GPIO, RIGHT_DIR2_GPIO_Pin);
 
-	Motor_setSpeed(&motorR, 500);
-	Motor_setSpeed(&motorL, 500);
+	Motor_setSpeed(&motorR, 600);
+	Motor_setSpeed(&motorL, 600);
 }
 
 void Presenter_getBtnState(){
@@ -49,11 +54,12 @@ void Presenter_exeuteTask() {
 	sprintf(buff, "                       ");
 	LCD_writeStringXY(1, 0, buff);
 
-	if (!motorQueFlag) return;
+
 
 	Presenter_getUltraData();
 	Presenter_getBtnState();
 	if (pbtnState == 0){
+		if (!motorQueFlag) return;
 		Presenter_setState();
 		sprintf(buff, "Manual");
 		LCD_writeStringXY(1, 0, buff);
@@ -64,6 +70,9 @@ void Presenter_exeuteTask() {
 	}
 	sprintf(buff, " %02d %02d %02d", pData.sonicData2, pData.sonicData1,pData.sonicData3);
 	LCD_writeStringXY(1, 6, buff);
+	//sprintf(buff, " %02d %02d %02d", movingAvgFilter_int(pData.sonicData2), movingAvgFilter_int(pData.sonicData1),movingAvgFilter_int(pData.sonicData3));
+	//LCD_writeStringXY(0, 7, buff);
+	//HAL_UART_Transmit(&huart2, &pData, 1, 1000);
 	//MotorState_setFlag(RESET);
 }
 
@@ -85,6 +94,7 @@ void Presenter_setState() {
 		break;
 	case BACK:
 		Presenter_CarBACK();
+
 		break;
 	case SPEED:
 		Presenter_CarSPEED();
@@ -115,19 +125,24 @@ void Presenter_CarLEFT() {
 	LCD_writeStringXY(0, 0, "Car Left!   ");
 	Motor_backward(&motorL);
 	Motor_forward(&motorR);
-	setSound(soundLUT[0]);
+	//setSound(soundLUT[0]);
 }
 void Presenter_CarRIGHT() {
 	LCD_writeStringXY(0, 0, "Car Right!    ");
 	Motor_backward(&motorR);
 	Motor_forward(&motorL);
-	setSound(soundLUT[7]);
+	//setSound(soundLUT[7]);
 }
 void Presenter_CarBACK() {
+
 	LCD_writeStringXY(0, 0, "Car Back!    ");
 	Motor_backward(&motorR);
 	Motor_backward(&motorL);
-	setSound(soundLUT[1]);
+	for (int i=0; soundBuff[i]; i++){
+		setSound(soundBuff[i]);
+		HAL_Delay(200);
+	}
+	stopSound();
 }
 
 void Presenter_BackLEFT(){
@@ -170,11 +185,4 @@ void Presenter_AutoState(){
 	}
 }
 
-void setSound(int freq) {
-	htim5.Instance->ARR = 1000000 / freq - 1;
-	htim5.Instance->CCR1 = htim5.Instance->ARR / 2;
-}
 
-void stopSound() {
-	htim5.Instance->CCR1 = 0;
-}

@@ -13,9 +13,12 @@
 #include "../model/MovingState.h"
 #include "../model/ADC_data.h"
 
+#include "../common/filter/filter.h"
+
 #include "../../driver/LCD/LCD.h"
 #include "../../driver/led/led.h"
 #include "../../driver/motor/motor.h"
+#include "../../driver/buzzer/buzzer.h"
 
 
 
@@ -44,7 +47,6 @@ void Presenter_BackLEFT();
 void Presenter_BackRIGHT();
 void Presenter_AutoState();
 
-void setSound(int freq);
-void stopSound();
+
 
 #endif /* AP_PRESENTERTASK_PRESENTER_H_ */
